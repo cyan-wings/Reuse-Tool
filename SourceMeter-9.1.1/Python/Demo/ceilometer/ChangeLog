@@ -1,0 +1,3647 @@
+CHANGES
+=======
+
+9.0.0
+-----
+
+* update measurements
+* Fix a typo in ceilometer
+* Remove install-guide env which is not effective
+* fix cpu\_util precision is too precise
+* ensure timezone is included in timestamps
+* snmp: Fix discovery when total memory is missing
+* Fix share.size meter
+* vmware: ignore -1 values
+* stop converting to old message format
+* deprecated pollster-list
+* [Trivialfix]Fix typos in ceilometer
+* Update and replace http with https for doc links in ceilometer
+* Deprecate kafka publisher
+* wrong document location
+* Update the documentation link for doc migration
+* Fix neutron lbaas v2 when no listeners are set
+* add configuration folder
+* Fix inspect\_vnics error for libvirt
+* generate conf on doc build
+* turn on warning-is-error for doc builds
+* add missing sphinx extension
+* High precision rate of change timedelta
+* Specify region when looking for radosgw admin URL
+* doc: move install guide to main doc dir
+* remove templates
+* doc: move old dev docs to contributor section
+* doc: initial index cleanup
+* Project\_id for SDN controller meters
+* Gnocchi support for SDN controller meters
+* Ceilometer meter support to collect network statistics
+* Fix some initializations
+* Docs: update the path of "meters.yaml" and its new feature
+* Docs: switch to openstackdocstheme
+* Remove the explanation of nonexistent parameter
+* Update URL home-page in documents according to document migration
+* Add memory swap metric
+* Move "test\_versions.py" to the directory of functional test
+* Remove interval reference to pipeline
+* api: remove unused code
+* tempest: Use primary user token
+* Update Documentation link in README
+* Add some unit test cases
+* Limit the default numbers of metrics polled
+* Don't check libvirt exception if libvirt is absent
+* Revert "deprecate archive policy of Gnocchi dispatcher"
+* Fixed ceilometer arithmetic transformer  bug
+* explicitly note sanitize\_timestamp return condition
+* Remove old maintainers
+* Add a description of the parameters to function
+* Migrate telemetry-events
+* Migrate telemetry-best-practices
+* Migrate telemetry-data-retrieval
+* Migrate telemetry-data-collection
+* Migrate telemetry-data-pipelines
+* Migrate telemetry troubleshooting guide
+* migrate telemetry measurements
+* Fix typo for additional device support in intel node manger
+* Add some unit test cases
+* Add event definition for manila
+* Migrate telemetry system architecture
+* Fix UnicodeEncodeError error when log messge in poll\_and\_notify
+* use tempest manager
+* Fix some reST field lists in docstrings
+* expect oslo.messaging messages
+* Fix can not find VMwareAPISession when import oslo\_vmware
+* post\_test\_hook: stop sourcing gnocchi/devstack/settings
+* cap cpu\_util
+* ensure resources are hashable
+* Doc: guide for operating resource type
+* Add share create/delete/expand/shrink meters
+* fix service path for fedora
+* modify the description for GnocchiDispatcher
+* add instruction to set auth\_mode
+* Update meters definition reference
+* Added Nova Compute CPU metrics to gnocchi\_resources.yaml
+* devstack: install Gnocchi using pip
+* This remove annoying message repetition in logs
+* Fix html\_last\_updated\_fmt for Python3
+* update link away from google docs
+* Replace assertRaisesRegexp with assertRaisesRegex
+* Trivial fix typos
+* change to reference gnocchi.xyz
+* Change default polling interval
+* Fix typo in docstring
+* XenAPI: use os-xenapi for XenAPI driver
+* Support loading multiple meter definition files
+* tempest: fix some future flake8 issue
+* tempest: remove deprecation warning
+* Deprecate olsotest.mockpatch in favor of native fixtures
+* Fix a typo
+* tempest: Allow to configure granularity
+* integration: always run all commands
+* Remove upper constraint on sqlalchemy
+* Adds a Zaqar publisher
+* tempest: tell tempest our scenario are long
+* integration: Fix report generation
+* tests: fix messaging driver
+* minor doc updates
+* Replace Ceilometer coordination layer by tooz partition system
+* Fix publisher doc link
+* gnocchi/notification: allow to configure the maximum number of requests in parallel
+* tempest: Don't hardcode the network name
+* Remove powervm from inspector doc
+* Cleanup post\_test\_hook.sh
+* tempest: use the configured flavor
+* tests: remove oslo.config fixture usage
+* tempest: rework gabbi setup
+* Remove log translations
+* Change the compute polling local cache to be mutex
+* Optimize the link address
+* Format the abstraction layer of inspector methods to avoid TypeError
+* fix install-guide gnocchi+keystone instruction
+* Correct the configuration of pipeline\_processing\_queues in devstack
+* compute: remove default duration value
+* compute disks: use the generic compute pollster
+* compute vnics: use the generic compute pollster
+* Add tool for migrating metric data from ceilometer's storage to gnocchi
+* Use vcpu.x.time and vcpu.x.wait values in libvirt inspector
+* tests: fix conf object creation
+* Adds 'disabled' to the possible states for a member in LBaaSv2
+* deprecated support of pipeline.yaml for polling
+* Correct bad use response\_strings in live.yaml
+* Use HostAddressOpt for opts that accept IP and hostnames
+* deprecate archive policy of Gnocchi dispatcher
+* tempest: Fix exception handling
+* [install-guide] Add more links
+* tempest: remove confusing stack check step
+* fix gnocchi unprocessed measures debug
+* compute: Remove dead code
+* compute: create one pollster to rule them all
+* Bump gnocchiclient min version
+* Remove second tenacity in requirements
+* tests: stop hammering CPU while waiting for sample to wait
+* coordination: remove started check
+* coordination: remove group\_id check
+* coordination: stop checking for \_coordinator to be None
+* coordination: create coordinator at init time
+* coordination: make group\_id to never be None
+* Add sem-ver flag so pbr generates correct version
+* tests: simplify broken test
+* libvirt: rewrite the error handling
+* Fix the incorrect gnocchi command
+* fix blacklisting NovaLike resources
+* tests: remove unused mocked method
+* remove resource if not created
+* fix gnocchi\_resources mapping
+* cleanup unused devstack code
+* start notification agent after restarting apache
+* Swallow & report 404s from Swift (missing tenant)
+* Remove Rohit Jaiswal from maintainers
+* devstack: Set an optimal processing queue
+* tempest: remove broken tests
+* remove ceilometer-collector condition when configuring storage
+* make gnocchi independent of ceilometer-api
+* Switch to use stable data\_utils
+* make gnocchi posting more resilient
+* remove tooz safety catch
+* Bugfix: use transport\_url from [oslo\_messaging\_notifications] if present
+* Bump kafka-python and oslo.messaging
+* Make sure to get all tenants by scanning each available domain
+* add jitter to notification agent
+* Modify variable's usage in Log Messages
+* agent: only create partition coordinator if backend url provided
+* agent: start coordinator at run() and never stops
+* coordination: use tooz builtin heartbeat manager
+* coordination: use join\_group\_create()
+* coordination: simplify retry condition by using tenacity.TryAgain
+* coordination: stop tracking joined groups
+* coordination: use a conf object with registered options in tests
+* Remove pipeline periodic refresh feature
+* Switch to use stable data\_utils
+* Enable Basic and https certificate authentication for http publisher
+* tempest: skip legacy telemetry-api tests
+* Use more specific asserts in tests
+* Load pipeline config files from /etc/ceilometer/ firstly
+* Don't run ceilometer-upgrade on unconfigured db
+* use tooz hashring
+* Remove unused variable
+* prepare future tempest breakage
+* include gnocchi+keystone instructions in install guide
+* add configuration instructions from admin guide and dev docs
+* upgrade gnocchi via ceilometer
+* switch dispatcher references to publisher
+* remove legacy db stuff
+* gnocchi: remove archive policy setting for identity
+* Use bytes for coordination member
+* Using Panko as publisher than dispatcher if enabled
+* remove keystone\_authtoken from polling agent
+* support gnocchi timeout
+* Remove smoke tag for TelemetryNotificationAPITest
+* add missing instance meta
+* Trivial: remove extra spaces
+* Support extended declaring exchanges
+* Remove unused override
+* remove collector instructions
+* chill out on the number of items in toc
+* Revert "verify gnocchi connection before processing"
+* Fix reno title format
+* doc: update pipeline link
+* Ship YAML file to /usr/share
+* Deprecate event\_dispatchers and meter\_dispatchers options
+* Remove useless metric name
+* set OS\_AUTH\_TYPE in gate
+* Support i18n for api app
+* Correct the use of marker function
+* match generic cirros name
+* nova: track flavor name
+* Trivial-fix: use domain\_id instead of domain\_name
+* fix [service\_credentials] section location
+* fix gnocchi url links
+* drop kwapi pollster
+* Correct the doc link
+* remove PaaS event format
+* cleanup devstack cache initialisation
+* add note about batching+gnocchi
+* Switch to use test\_utils.call\_until\_true
+* gabbi: use history
+* Deprecate collector
+* Remove support for py34
+* Use https instead of http for git.openstack.org
+* stop hardcode timeout in tempest tests
+* Update reno for stable/ocata
+
+8.0.0
+-----
+
+* add polling.yaml docs
+* Do not use non-UUID resource ID in Aodh+Gnocchi tests
+* Use Tempest stable library interfaces
+* polling definition file
+* remove endpoint\_override
+* gnocchi: do not use removed encode\_resource\_id
+* update multi-publisher image
+* make connection pool configurable
+* make http publisher equivalent to dispatcher
+* add ceilometer-upgrade step to install guide
+* update verify to use gnocchi
+* drop api and storage references from install-guide
+* Switch to decorators.idempotent\_id
+* modernise gabbi tests
+* drop notes re mod\_wsgi
+* move and trim legacy db docs
+* show panko events for debug
+* devstack: make sure it's possible to deploy panko only
+* set project\_id for cinder polling
+* install-doc: Disable ceilometer-api service
+* check panko during integration test
+* set panko dispatcher if enabled
+* tripleo: Fix logging of tripleo discovery
+* agent: always print the extension name on failure
+* Fix same type of simple message error
+* Don't load many times the same publisher
+* pipeline: remove tests helper from runtime code
+* Trivial: add white space of error message
+* Add support of refereshing the resource info in local cache
+* Simplify code of test\_complex\_query
+* Trivial: remove white space of exception message
+* switch instance\_discovery to libvirt\_metadata
+* publisher: fix pipeline confusing reference
+* remove test\_hbase\_table\_utils
+* Use parameter skip\_op\_id in compute.virt.vmware.test\_vsphere\_operations
+* gnocchi: replace / by \_ in resource\_id
+* gnocchi: don't rely on gnocchi uuid5
+* gnocchi: prepare removal of gnocchi uuid5
+* gnocchi: move volume\_type to correct section
+* tempest: use tempest img
+* fix the gnocchi resource type upgrade
+* remove residual instance pollster
+* use domainListGetStats to get cputime
+* drop instance meter
+* Fix oslo.vmware change that added new keyword argument
+* Don't poll nova with compute agent
+* tempest: Allow to not run deprecated API tests
+* Remove events storage and API
+* Update custom install doc
+* correct volumes name source
+* add volume.backup.size to gnocchi
+* upgrade: fix gnocchi resource update
+* stop assuming ceph/swift share same endpoint
+* devstack: check for ceilometer+panko service
+* tempest: allow usage of scenario-img for autoscaling
+* Fix the gate failure because of several issues
+* Trival-Fix: replace "nova" with "ceilometer" in api-ref
+* Fix error module usage
+* add support to parse user metadata
+* [doc] Note lack of constraints is a choice
+* always create ceilometer user
+* glossary: remove collector and add publisher
+* Test suite for Aodh's gnocchi-resource-threshold alarm
+* simplify fail gnochi+ceilometer check
+* Fix publisher comment
+* integration: run gabbi first
+* integration: deleting the stack sometimes timeout
+* tempest: support keystone v3 for autoscaling
+* tests: generate reports when tempest fail
+* Make sure gnocchi is enabled before ceilometer
+* Added new instance metrics to gnocchi definition
+* Revert "Add hypervisor inspector sanity check"
+* gnocchi: Allow to set a different creds section
+* Allow to configure the triplo network name
+* Fix oslo.vmware lazy loading
+* test: remove unused variable
+* utils: remove unused function stringify\_timestamps
+* gnocchi: Add volume\_type attribute to volume
+* devstack: Don't enable api by default
+* add libxml2 required for lxml
+* fix http publisher test
+* filtered out the phynical nics when query vm nics with VMware API
+* Correct ceilometer reraising of exception
+* Fix typo in plugin.sh
+* Add old vm state for compute.instance.update
+* capture keystone authentication as metric
+* tools: stop using global conf
+* gnocchi: use batch create\_metrics=True
+* Fix the install guide bug
+* Update Ceilometer architecture docs
+* Remove useless mock
+* drop \`counters\` support from pipeline
+* cleanup unit test location
+* update architecture docs
+* Remove api index file
+* Bump minimal version of cotyledon
+* Make rabbitmq configuration much simpler
+* Reenable the tempest test about nova notification
+* use hyphen-less option name sql\_expire\_sample\_only
+* Translate info-level log messages for LOG.error
+* drop disable\_non\_metric\_meters option
+* cleanup gnocchiclient
+* Change gnocchi\_ext.NotFound to gnocchi\_ext.ResourceTypeNotFound
+* integration tests: fix generation of tests\_results.html
+* Use one log level
+* Add volume and floatingip event\_delete for gnocchi event\_dispatcher
+* more gnocchi mapping cleanup
+* cleanup gnocchi mapping
+* cleanup manual install
+* fix postgresql functional gate
+* Add a release note for HTTPProxyToWSGI middleware
+* Modify unit of disk requests rate
+* Handling KeyError error, make gnocchi event dispatcher work
+* Corrected debug msg in CPUL3CachePollster
+* doc cleanup
+* use aodhclient in integration test
+* Print ceilometer configuration on startup
+* register ceilometer options at runtime
+* utils: stop using global conf
+* intel\_node\_manager: stop using global conf
+* Remove useless singleton check
+* register oslo\_db options at runtime
+* register keystoneauth options at runtime
+* storage: stop using global conf
+* cmd.storage: stop using global conf
+* test\_storage\_scenarios: stop using global conf
+* raise InstanceShutOffException if vm power off when get\_vm\_moid use map of vm manage obj to reduce vmware api calls
+* Remove duplicated code
+* Remove useless code
+* drop image pollster
+* gnocchi: remove useless keepalive adapter
+* comment: remove unused comment
+* XenAPI: Not support two key network meters
+* Replace retrying with tenacity
+* Clean the glance v1 code in tempest plugin
+* Convert file publisher to be equivalent to file dispatcher
+* Add aliases for direct publisher
+* doc: fix the wsgi configuration file name
+* deprecate ceilometer api
+* make blacklist log more specific
+* extract 'instance\_id' as 'resource\_id' in event definitions
+* disable signing in direct publisher
+* Add pyOpenSSL to test-requirements
+* Trivial fix: fix a wrong config option type usage
+* Add support of metering volume related resources
+* coordination: remove unused kwarg
+* Fix bug for ceilometer polling generates an error
+* fix perf when libvirt is >=2.0.0 and <2.3.0
+* Remove ceilometer tool show\_data.py since it is not usable
+* Bump hacking to 0.12
+* Replace oslo\_utils.timeutils.isotime
+* inspectors: stop using global conf
+* meter.notifications: stop using global conf
+* collector: stop using global conf
+* pollsters: stop using global conf
+* Replace SimpleProducer with KafkaProducer
+* document: remove configuration README description
+* devstack: allow to configure not backend
+* Modify variable's using method in Log Messages
+* compute.util: stop using global conf
+* event.converter: stop using global conf
+* discovery: stop using global conf
+* event: stop using global conf
+* sample: stop using global conf
+* keystone\_client: stop using global conf
+* publisher: stop using global conf
+* Use method constant\_time\_compare from oslo.utils
+* Add more verbosity for gnocchi\_resources.yaml
+* Add package "pifpaf" license description
+* Change redirect status from 307 to 308
+* Use set\_defaults method in oslo\_middleware to check CORS\_OPTS
+* change gnocchi cache enable condition
+* Correct wrong description of method enforce
+* Fix gate problem related to  \_error\_checker()
+* Remove deprecated ceilometer-dbsync
+* gnocchi: don't show backtrace on connection failure
+* fix gate
+* Redact password from opendaylight client logging
+* Broken Link: setuptools entry point
+* enable caching
+* Replace 'vmware' with 'vsphere'
+* gnocchi: stronger configuration file parsing
+* Don't create useless threads
+* pipeline: stop using global conf
+* declarative: stop using global conf
+* coordination: stop using global conf
+* Remove buggy usage of global config
+* pipeline services: stop using global conf
+* Fix collector single worker to handle UDP package with many worker config
+* Add http\_proxy\_to\_wsgi to config-generator
+* Fixed cotyledon version requirement
+* Remove pecan\_debug option
+* Fix the issue that missing the app file
+* neutron\_client: stop using global conf
+* nova\_client: stop using global conf
+* messaging: stop using global config
+* collector: stop using global config
+* api: Remove global conf
+* tests: fix broken udp tests
+* tests: fix tests for functional tests without dsvm
+* fix perf when libvirt is >=2.0.0 and <2.3.0
+* Add http\_proxy\_to\_wsgi to api-paste
+* make gnocchi event dispatcher work
+* Enable release notes translation
+* collector: do not set any dispatcher by default
+* Remove the unnecessary space
+* Add autoscaling scenario in tempest tests
+* Compute agent can poll tx and rx errors and drops
+* Batching of event & meter dispatching over HTTP
+* Stop adding ServiceAvailable group option
+* specific the title
+* Trivial - Changes rst markup
+* Alters rst markup to comply with OpenStack rst guidelines
+* Add prefix "$" for command examples
+* Use 'code-block' for pieces of code
+* Docstrings should not start with a space
+* collector: fix graceful shutdown when udp enabled
+* Updates rst markup to better align with OpenStack rst guidelines
+* Modify startup parameters of ceilometer-api in devstack script
+* Fix the "Gnocchi" link pages of custom.rst doc
+* Bad Link: stevedore
+* Clean the deprecated non-metric related code
+* Clean imports in code
+* Using assertIsNone() instead of assertIs(None)
+* Using assertIsNone() instead of assertIs(None)
+* Fix typo in a docstring in agent/manager.py
+* XenAPI: polling meters are always 0
+* Fix UnicodeEncodeError in Ceilometer polling
+* gabbi: set panko\_is\_disabled to avoid relying on Keystone autodiscovery
+* tox: refactor targets
+* Fix problem when using wsgi script to start
+* Remove import objects and use import modules
+* Refactor Ceilometer resource API
+* Move oslo.db to hard requirements list
+* Remove left over from old ceilometer-api binary
+* gabbi: import pipeline\_cfg\_file option before using it
+* Update reno for stable/newton
+
+7.0.0.0rc1
+----------
+
+* agentbase: remove flaky test
+* add note regarding pipeline\_processing\_queues option
+* Refactor Ceilometer event API
+* Refactor Ceilometer alarm API
+* standardize release note page ordering
+* gnocchi: enable event\_dispatcher in devstack and doc
+* Use pbr wsgi\_scripts feature to build ceilometer-api
+* Change fnmatch.match method to fnmatch.fnmatch
+* tox: Remove useless env
+* Use deps extra for optional requirements
+* Don't require gnocchiclient
+* Initialize correctly collector
+* update docs to show Telemetry projects
+* Remove store\_events options
+* Remove sql-expire-samples-only as a CLI option
+* Update the compute node service\_credentials parameters
+* Corrected file mode settings
+* Add oslo.config cli opt to skip the confirm check
+* add new meters about some perf events
+* Set a correct number of threads for polling tasks
+* improve notification processing
+* Fix string interpolation in log
+* correct input params in get\_samples
+* refactor service to be less pipeline dependent
+* [api-ref] Correct response code
+* [api-ref] Remove temporary block in conf.py
+* XenAPI: correct polling on memory\_usage
+* gnocchi: Create resource-types on upgrades
+* Allow to skip metering/event database upgrade
+* Deprecate Kwapi pollsters
+* Rename ceilometer-dbsync in ceilometer-upgrade
+* make reload test more resilient
+
+7.0.0.0b3
+---------
+
+* generalise instable API redirect assertion
+* Nit: Aligning the content
+* Config logABug feature for Ceilometer api-ref
+* Fix checking IP version when using IPv6
+* remove needless brackets
+* The debug that network.incoming/outgoing.packets print is not right
+* Update readme file
+* [install] Create endpoint in one command
+* [install] Add a missing stash
+* Replace urllib.quote() with six.moves.urllib.parse.quote()
+* correct the meaning of direct publish transport
+* correct the mistake in install-guide document
+* Add a publish transport in Ceilometer architecture document
+* XenAPI: failed to poll cpu\_util
+* Cleanup imports in code
+* add url in setup.cfg
+* conversions: remove no used local variable
+* Add api-ref/build to .gitignore
+* Fix a warning when running \`tox -e api-ref\`
+* Gnocchi dispatcher fails on skipped metric
+* Get ready for os-api-ref sphinx theme change
+* [dev-docs] Changed location of a class
+* Limit Happybase to < 1.0.0
+* Fix tempest.conf generation
+* Configuration of certificate verification for HTTP dispatcher
+* api: redirect to Panko if enabled
+* fix the %{} when string formatting
+* ValueError exception when SNMP returns NoSuchObject
+* Format error message in http.py
+* HTTP Dispatcher: Post event data as JSON & improve logging
+* dispatcher: deprecate event database dispatcher for Panko
+* dispatcher/database: simplify connection retrieving
+* dispatcher: split the database dispatcher
+* Switch to use Glance v2 in image pollsters
+* Fix the not found link for notification in glossary.rst
+* Added a link to the architecture guide
+* Removed redundant phrase to increase readability
+* Fixed small grammar error in overview.rst
+* Set the correct for image bytes\_sent event
+* Change keystoneclient to keystoneauth
+* tests: rewrite batching test in a less racy way
+* Remove an unused method of network pollsters' base class
+* Fixed a small grammar error configuration help doc
+* add memory bandwidth meter
+* Do not limit elasticsearch to 2.0
+* tests: remove dead code with self.source\_resources
+* Remove Nadya Privalova from core reviewers
+* Fix wrong parameter reference in periodic decorator
+* Add missing %s in print message
+* test: Fix wrong override value of config option interface
+* Modify py3.4 to py3.5 in the py35-functional of tox
+* Put py34 first in the env order of tox
+* This adds migrated API reference files
+* consumes error notif. when event are disabled
+* publisher: make direct publisher generic
+* Revert "[install] Create endpoint in one command"
+* Register the gnocchi event dispatcher
+* Reduce code duplication
+* Specify host info when using the notifier publisher
+* Add Python 3.4 and 3.5 classifiers and targets
+* Retrieval of RBD device information issue
+* Install configuration files in etc
+* Added full support of snmp v3 usm model
+
+7.0.0.0b2
+---------
+
+* base.Resource not define \_\_ne\_\_() built-in function
+* Check lbaas version if call is v2 specific
+* move out oslo.service
+* Remove unused AdvEnum class definition
+* fix l3\_cache definition
+* throw PollsterPermenantError exception for memory usage meter
+* events: fix operator check in event filter
+* Raise PollsterPermanentError if inspector is not implemented
+* Remove unused LOG
+* Fix get\_gnocchiclient to work with python3.5
+* collector: use an intermediate proxy class for event dispatcher
+* Replace raw\_input with input to make PY3 compatible
+* pollsters: Remove eventlet timers
+* Imported Translations from Zanata
+* Fix the name as it was a typo
+* devstack: prefix \_drop\_database
+* start partition coordinator only when there is a group to join
+* split discover into different namespaces
+* devstack: disable workload\_partition for compute polling
+* Add a tool to clean the legacy alarm tables
+* devstack: do not wait for service to start
+* Config: no need to set default=None
+* sqlalchemy: do not run upgrade on fresh install
+* sqlalchemy: fix JSONEncodedDict implementation type
+* Add install-guide for ceilometer
+* gnocchi: use events to end Gnocchi resource
+* Don't generate hostname of host running build to config file
+* Fixing a trivial typo
+* Add 'task\_state' attribute to meter metadata
+* add support of batch recording metering data for mongodb
+* Switch to use glanceclient to get image
+* Add install description for Neutron
+* add l3 cache usage meter
+* doc: remove left over of docbookrestapi
+* tests: do not override auth version to v2
+
+6.1.0
+-----
+
+* dispacher/gnocchi: measures sent fix logging
+* Copy images\_client from tempest + Correct concurrency of gabbi 1.22.0
+* Rename gabbits with \_ to have - instead
+* Correct concurrency of gabbi tests for gabbi 1.22.0
+* Use "topics" instead of "topic" in Notifier initialization
+* Clean deprecated "rpc\_backend" in tests
+* Use trusts in Heat integration test
+* Remove configuration README in etc
+* Imported Translations from Zanata
+* Copy images\_client from tempest
+* Add Magnum events to definitions
+* [dispatcher/gnocchi] add unit for metric
+* Delete unused last\_dup variable
+* catch DriverLoadFailure for get\_transport optional
+* catch DriverLoadFailure for get\_transport optional
+* Bump to Nova v2.1
+* Fix the py34 jenkins job
+* tempest: import ImagesClient as ImagesClientV2
+* fix some typos in our doc, comments and releasenotes
+* enable swift pollsters poll data for specific region
+* enable swift pollsters poll data for specific region
+* Imported Translations from Zanata
+* tempest\_plugin: drop telemetry decorator
+* tempest\_plugin: drop telemetry decorator
+* Updated from global requirements
+* [Trivial] Update Neutron resource status list
+* doc: remove database alarm capability
+* replace deprecated heat command with OSC
+* Update to hacking 0.11.0
+* Verify message's signature for every dispatcher
+* fix CI failure due to oslo.messaging 5.0.0
+* remove log in tools/make\_test\_{event\_}data.py
+* fix CI failure due to oslo.messaging 5.0.0
+* remove record\_metering\_data method from collector
+* tests: replace overtest by pifpaf
+* Add log hints for partition coordinator
+* fix opts.list\_opts for polling options
+* update help string for messaging\_urls
+* Drop timestamping in pollsters
+* Set the time point polling starts as timestamp of samples
+* Fix notification listeners usage
+* tox: only install hacking in pep8 target
+* Remove unused pylintrc
+* devstack: remove useless policy\_file setting
+* event: verify signature before recording events for all dispatchers
+* tests: stop services on tests teardown
+* Fix oslo\_service stop/start mechanism
+* remove floating\_ip\_get\_all in nova\_client
+* [Trivial] Refactor libvirt inspector connection & uri
+* Fix concurrency issue with snmp pollsters
+* Drop the executability of http.py
+* Updated from global requirements
+* remove deprecated auth type password-ceilometer-legacy
+* [Trivial] Update Neutron resource status list
+* [Trivial] Remove CEILOMETER\_API\_LOG\_DIR option for devstack
+* Update the default log levels
+* Clean some unused method in ceilometer/keystone\_client.py
+* remove invalid todo in storage functional test code
+* return 400 when invalid aggregation function is specified
+* Replace logging with oslo\_log
+* remove deprecated option database\_connection
+* move EventFilter to event storage namespace
+* remove MultipleResultsFound and NoResultFound exception
+* Remove useless file
+* remove todo for OS\_TEST\_PATH
+* add tempest to test-requirements.txt
+* Improve the docstring for Swift pollsters
+* add log decorator for neutron\_client public method
+* add debtcollector to requirements
+* Remove direct dependency on babel
+* Imported Translations from Zanata
+* Refactor floatingip pollster to use discovery
+* Fix notification listeners usage
+* notification: Remove eventlet timers
+* use static timestamps for api samples
+* refactor DefinitionException classes
+* collector: Don't use eventlet thread
+* fix openstack cli command in doc manual
+* Add release note link
+* switch to openstack cli instead of keystone cli
+* Updated from global requirements
+* libvirt: fix missing python-libvirt issue
+* Add status in Ceilometer VPN connection sample
+* document how to enable ceilometer stable branch in devstack
+* remove python-ceilometerclient from requirements
+* Imported Translations from Zanata
+* Updated from global requirements
+* Imported Translations from Zanata
+* Ignore the filter\_service\_activity option if gnocchi project not found
+* Fix Ceilometer tests config options
+* Updated from global requirements
+* Fix doc build if git is absent
+* Replace tempest-lib by os-testr
+* Add notes on moving to Gnocchi
+* delete verbose/redundant/deprecated text
+* replace fnmatch with oslo.utils.fnmatch
+* add ceilometer to gnocchi configuration notes
+* Updated from global requirements
+* Imported Translations from Zanata
+* remove complex capabilities for meter, resource and statistics
+* gnocchi: batch measurements
+* change keystone to openstack cli
+* re-org existing manually install notes
+* messaging: remove RequestContextSerializer
+* Remove unused context object in vpnaas test
+* Remove unused object from lbaas\_v2 test
+* Remove unused context object lbaas test
+* test: remove unused context object in FWaaS tests
+* Remove unused context objects in Glance tests
+* Remove unused context object in test
+* Remove a useless usage of oslo.context in meters API
+* Remove the deprecated DB2 driver
+* Update the Administrator Guide links
+* mongo: remove unused function
+* Updated from global requirements
+* Imported Translations from Zanata
+* drop magnetodb support
+* Simplify chained comparison
+* Enhancing Retry logic to Coordination when joining partitioning grp
+* publisher: clean out context usage
+* Disable ceilometer-aipmi by default for devstack
+* Remove useless context object usage
+* Imported Translations from Zanata
+* Imported Translations from Zanata
+
+6.0.0
+-----
+
+* collector: never allow to lose data
+* 'ceilometer-polling' should fail with no valid pollsters
+* Imported Translations from Zanata
+* Fix typos in comments and config strings
+* Updated from global requirements
+
+6.0.0.0rc2
+----------
+
+* abort alarms URLs when Aodh is unavailable
+* abort alarms URLs when Aodh is unavailable
+* fix minor typo in test\_generic.py
+* Imported Translations from Zanata
+* Add the functional tests for getting events
+* collector: never allow to lose data
+* devstack Fix unprocess measure path
+* Imported Translations from Zanata
+* devstack: allow ceilometer-api and keystone to run on different hosts
+* Devstack: install coordination backend for compute agent
+* remove dns and trove from entry\_points
+* correct docstring in storage module
+* Imported Translations from Zanata
+* Remove gabbi tests that check content-location
+* Add http publisher
+* remove dns and trove from entry\_points
+* Imported Translations from Zanata
+* Imported Translations from Zanata
+* Update reno for stable/mitaka
+* Update .gitreview for stable/mitaka
+* Remove gabbi tests that check content-location
+
+6.0.0.0rc1
+----------
+
+* Imported Translations from Zanata
+* remove unused field 'triggers' defined in sample event\_pipeline.yaml
+* remove SERVICE\_TENANT\_NAME from devstack plugin
+* clean devstack plugin
+* add rc1 release notes
+* Use assertIn and assertNotIn
+* core status cleanup
+* tests: remove ceilometer-api bin test cases
+* gate: add missing sudo
+* change dns and trove notifications to declarative
+* Remove en\_GB translations
+* register the config generator default hook with the right name
+* Imported Translations from Zanata
+* Updated from global requirements
+* tempest: migrate api and scnario tests from tempest
+* mitaka-3 release notes
+* Adjust log levels for InstanceShutOffException
+* Fix event\_type creationg failure due to race condition
+* Imported Translations from Zanata
+* Ignoring cpu measurement when instance's state is SHUTOFF
+* Add validation for polling\_namespaces option
+* xenapi: support the session when xenserver is slave
+* Imported Translations from Zanata
+* gnocchi dispatch: Added new resource type support
+* remove wrong "#!/usr/bin/env python" header
+* Fixed corner cases of incorrect use of oslo.config
+* Updated from global requirements
+* timedelta plugin for meter definition process
+* Cast Int64 values to int, float in statistics
+* Cache getters for the decalarative definitions
+
+6.0.0.0b3
+---------
+
+* [sahara] add events definitions regarding new notifications
+* Moved CORS middleware configuration into oslo-config-generator
+* Add the meter example file 'lbaas-v2-meter-definitions.yaml'
+* Change default policy to allow create\_samples
+* Enable the Load Balancer v2 events
+* Remove unused pngmath Sphinx extension
+* Updated from global requirements
+* Fix a minor missing parameter issue
+* close services in test
+* Add an update interval to compute discovery
+* Docs: Configure meters/events dispatch separately
+* Fix the typo in the gnocchiclient exception
+* Updated from global requirements
+* Add gnocchi dispatcher opts to config
+* Change the SERVICE\_TENANT\_NAME to SERVICE\_PROJECT\_NAME
+* Hyper-V: replaces in-tree hyper-v utils usage with os\_win
+* Initial seed of hacking
+* Add /usr/local/{sbin,bin} to rootwrap exec\_dirs
+* Fix SDR file parsing for Intel Node Manager
+* Gnocchi: fix ResourcesDefinitionException for py3
+* Change LOG.warn to LOG.warning
+* tests: fix unworking debug output
+* Adds timestamp option to Aggregation transformer
+* remove default=None for config options
+* Replace assertEqual(None, \*) with assertIsNone in tests
+* Trivial: Cleanup unused conf variables
+* Enable the Load Balancer v2 for the Ceilometer(Part Two)
+* Remove unused variable
+* Enable the Load Balancer v2 for the Ceilometer(Part One)
+* Fix footnote reference to Aodh in docs
+* Updated from global requirements
+* Set None explicitly to filter options
+* KEYSTONE\_CATALOG\_BACKEND is deprecated
+* Use overtest to setup functional backends
+* devstack: Fix Keystone v3 configuration typo
+* Imported Translations from Zanata
+* Handle malformed resource definitions gracefully
+* Update the home page
+* Skip duplicate meter definitions
+* set higher batching requirement
+* use retrying to attempt to rejoin group
+* network: remove deprecated option name
+* sample: remove deprecated option name
+* Fix wrong capitalization
+* rewriting history
+* Remove unused pytz requirement
+* devstack: use password with version discovery
+* fix tempest path
+* Updated from global requirements
+* raise coordination error if not registered
+* do not configure worker specific items in init
+* integration-gate: fix publicURL retrieval
+* rolling upgrades
+* fix locking in ceilometer
+* enable notification agent partitioning
+* better support notification coordination
+* remove useless notification listener helper
+* Lookup meter definition fields correctly
+* Enhances get\_meters to return unique meters
+* Imported Translations from Zanata
+* Updated from global requirements
+* Fix ceilometer floatingip pollster
+* Updated from global requirements
+* tempest: migrate base class for tests
+* tempest: add ceilometer tempest plugin
+* tempest: add telemetry client manager
+* tempest: migrate conf.py from tempest tree
+* tempest: copy telemetry client from tempest tree
+* Fix events rbac
+
+6.0.0.0b2
+---------
+
+* Don't store events with Gnocchi
+* add additional mitaka-2 release notes
+* Corrects typo "a other" -> "another"
+* Updated from global requirements
+* add release notes for mitaka-2
+* devstack: add support for Gnocchi backend
+* notification: Use oslo.messaging batch listener
+* Cleanup of Translations
+* Added CORS support to Ceilometer
+* Don't set keystonemiddleware cache
+* Set None explicitly to filter options
+* Add OSprofiler-specific events definitions
+* collector: Use oslo.messaging batch listener
+* Updated from global requirements
+* Changes aggregator transformer to allow retention\_time w/o size
+* Replace LOG.warn with LOG.warning
+* Updated from global requirements
+* wrong accumulative value of "network.services.lb.incoming.bytes"
+* Trivial: Remove vim header from source files
+* Trival: Remove unused logging import
+* Fix the typos in the source code
+* gnocchi: fix stack resource type
+* Misspelling in message
+* Clean pagination related methods of impl\_mongodb
+* Fix some typos in the snmp.py
+* remove local hacking check
+* [MongoDB] add indexes in event collection
+* Remove unused code in gnocchi dispatcher
+* remove unnecessary code
+* recheck cache after acquired gnocchi\_resource\_lock
+* collector: remove deprecated RPC code
+* fix case in function name
+* Catch the EndpointNotFound in keystoneauth1 than in keystoneclient
+* Log exception if stevedore fails to load module
+* Updated from global requirements
+* Revert "Revert "devstack config for dogpile cache""
+* add per resource lock
+* verify gnocchi connection before processing
+* [refactor] remove redundant import of options
+* Added unit test cases for pysnmp 4.3
+* Add keystoneauth1 in requirements
+* gnocchi: fix cache hash logic
+* gnocchi: use gnocchiclient instead of requests
+* show queue status on integration test
+* Updated from global requirements
+* using a consistent uuid as cache namespace
+* Duplicate information link for writing agent plugins
+* Use keystoneauth1 instead of manual setup
+* Do not mock the memcache interface for auth\_token
+* oslo.messaging option group/name change for notification topics
+* Correct the host field of instance metadata
+* fix the bug that gnocchi dispatcher can't process single sample
+* Replace stackforge with openstack
+* MAINTAINERS: remove outdated data
+
+6.0.0.0b1
+---------
+
+* Remove version from setup.cfg
+* add initial release notes
+* fix functional gate
+* messaging: stop using RequestContextSerializer
+* Fix ceilometer-test-event.py script
+* Deduplicate the code about snmp meter loading
+* Updated from global requirements
+* Revert "devstack config for dogpile cache"
+* Revert "Workaround requests/urllib connection leaks"
+* add cpu.delta to gnocchi resources
+* simplify collector cache
+* Consistent publisher\_id for polling agent
+* build metric list on init
+* re-implement thread safe fnmatch
+* clean up integration test urls
+* tools: fix default resource metadata for instance
+* don't pass ceilometer options to oslo.db engine facade
+* Use str(name) instead of name.prettyPrint()
+* Reduce code duplication
+* remove config files when run clean.sh
+* fix some test case wrongly skipped for mysql backend
+* Add WebTest to test-requirements.txt
+* tests: remove testscenario usage for storage drivers
+* Remove eventlet usage
+* Remove alarming code
+* Clarify the doc about multiple notification\_topics usage
+* Reduced source code by extracting duplicated code
+* devstack config for dogpile cache
+* Updated from global requirements
+* Updated from global requirements
+* Fix an indent nit of enforce\_limit method
+* Move the content of ReleaseNotes to README.rst
+* use common cache
+* A dogpile cache of gnocchi resources
+* Updated from global requirements
+* install database when collector is enabled
+* Updated from global requirements
+* Updated from global requirements
+* add reno for release notes management
+* Updated from global requirements
+* Support to get hardware's cpu\_util from snmp
+* add rohit\_ to MAINTAINERS
+* gnocchi: set the default archive policy to None
+* Mv gabbi\_pipeline.yaml into test directories
+* Factorize yaml loading of declarative stuffs
+* Factorize field definition of declarative code
+* Wrong result is returned when call events getting API
+* tox: use pretty\_tox in most places
+* Updated from global requirements
+* avoid unnecessary inner join in get\_resources() for SQL backend
+* Add sql-expire-samples-only to option list
+* Updated from global requirements
+* configure Apache only when ceilometer-api is enabled
+* Imported Translations from Zanata
+* avoid using isolation level
+* unquote resource id to support slash in it
+* specify runtime environment for scripts
+* Using oslo-config-generator to instead of generate-config-file.sh
+* Use gnocchiclient for integration script
+* Enable signature verification for events
+* Correct the timestamp type when make test samples data
+* Updated from global requirements
+* avoid generate temporary table when query samples
+* Reject posting sample with direct=true if Gnocchi is enabled
+* make script under tools directory executable
+* Updated from global requirements
+* Added the README.rst in devstack folder
+* fix tools/make\_test\_event\_data.py
+* fix image\_ref attr in gnocchi resource
+* support mysql+pymysql in functional test
+* Updated from global requirements
+* Fix snmp pollster to not ignore valid meters
+* Block oslo.messaging 2.6.1 release
+* reset policy per test
+* Remove dependency on sphinxcontrib-docbookrestapi
+* gnocchi: remove possible ending / in URL
+* api: simplify root controller
+* api: simplify Pecan config
+* remove instance:FLAVOR related code and docs
+* Do collector setup and storage cleanup for all backends
+* change collector\_workers to [collector]workers
+* Enable POST samples API when gnocchi enabled
+* devstack: fix debug info for Gnocchi
+* Imported Translations from Zanata
+* Add Liberty release note link
+* Fix make\_test\_data.sh
+* Imported Translations from Zanata
+* Be explicit when copying files to /etc/ceilometer
+* Deprecate event trait plugin 'split'
+* Updated from global requirements
+* Clean some log messages when polling neutron resources
+* Simplify the validation of required fields of pipeline source
+* doc: service enablement not necessary when using Devstack plugin
+* Skip bad meter definitions instead of erroring out
+* Remove the unused network\_get\_all method
+* mark logging.info translation accordingly
+* logging cleanup
+* Updated from global requirements
+* Remove last vestiges of devstack from grenade plugin
+* Add missing ceilometerclient repo location
+
+5.0.0
+-----
+
+* Imported Translations from Zanata
+* Fix for resource polling warnings
+* SQL: Fix event-list with multiple trait query filters
+* Fix the bug of "Error spelling of a word"
+* Imported Translations from Zanata
+* SQL: Fix event-list with multiple trait query filters
+* Fix a mistake in a test
+* Configure collector to only record meter or event
+* Rename list\_events tests to list\_samples tests
+* fix elasticsearch script reference
+* Fix the deprecation note in meter.yaml
+* Fix the deprecation note in meter.yaml
+* Remove deprecated archive policy map for Gnocchi
+* Remove enable\_notification.sh
+* Parametrize table\_prefix\_separator in hbase
+* Imported Translations from Zanata
+* fix typo in storage/impl\_sqlalchemy
+* devstack: install all configuration files from etc/
+* dispatcher: remove deprecated CADF code in HTTP
+* mongodb: remove deprecated replica\_set support
+* Ensure the test data sample has correct signature
+* Open Mitaka development
+
+5.0.0.0rc1
+----------
+
+* gnocchi: Don't raise NotImplementedError
+* Add missing meter and exchange opts
+* Imported Translations from Zanata
+* Add test to cover history rule change
+* Workaround requests/urllib connection leaks
+* integration tests: additional debugging infos
+* Coordinator handles ToozError when joining group
+* Don't create neutron client at loadtime
+* Delete its corresponding history data when deleting an alarm
+* update event filter test to validate multiple trait args
+* Fix variable typos
+* Updated from global requirements
+* Change ignore-errors to ignore\_errors
+* Fix reconnecting to libvirt
+* remove batch processing requirement from arithmetic transformer
+* Cleanup empty dirs from tests
+* retain existing listeners on refresh
+* Override dispatcher option for test\_alarm\_redirect\_keystone
+* [ceilometer] Update links to Cloud Admin Guide
+* Adds support for dynamic event pipeline
+* Updated from global requirements
+* Imported Translations from Zanata
+* pollster/api now publish to sample queue
+* tox: generate config file on test run
+* tox: Allow to pass some OS\_\* variables
+* Refactor keystone handling in discovery manager
+* Use make\_sample\_from\_instance for net-pollster
+* apply limit constraint on storage base interface
+* gnocchi: add two new resources
+* Fixed tox -egenconfig Error
+* Add declarative meters to developer docs
+* add delta transfomer support
+* do not recreate main queue listeners on partitioning
+* Validate required fields in meter definition
+* deprecate cadf\_only http dispatcher
+* Fix the heavy time cost of event-list
+* Update API Doc to deprecate the alarming part
+* Deprecate config options of the old alarming functionality
+* update architecture documentation
+* Add attribute 'state' to meter metadata when source is polling
+* doc: update devstack usage
+* Remove useless base class
+* Split out image non-meters
+* Make the gabbi tox target work with modern tox
+* Avoid 500 errors when duplicating limit queries
+* Correct test\_list\_meters\_meter\_id to work with py3
+* Updated from global requirements
+* Update event\_definitions for Cinder Image Cache
+* Update install docs
+* Use b64encode to replace of encodestring
+* Prevent ceilometer expirer from causing deadlocks
+* remove duplicate log exception message
+* Spelling mistake of comment in api/controllers/v2/query.py
+* Fix typos in gnocchi.py and converter.py
+* Updated from global requirements
+* Updated from global requirements
+* Add a py34-functional tox target
+* doc: update notification\_driver
+* polling: remove deprecated agents
+* Fix string in limit warning
+* Typo fixing
+* missed entrypoint for nova\_notifier removal
+* Imported Translations from Transifex
+* Fix links in README.rst
+* integration: Add debugging information
+* deprecate db2 nosql driver
+* devstack: add new option to support event-alarm
+* Sync devstack plugin with devstack:lib/ceilometer
+* Updated from global requirements
+* remove old nova\_notifier processing code
+
+5.0.0.0b3
+---------
+
+* restrict admin event access
+* Migrate the old snmp pollsters to new declarative pollster
+* Support to load pollsters extensions at runtime
+* Added snmp declarative hardware pollster
+* Requeuing event with workload\_partitioning on publish failure
+* Event filtering for non-admin users
+* integration: fix typo
+* gnocchi: cleanup instance resource definition
+* Updated from global requirements
+* Adding pradk to MAINTAINERS
+* Adding liusheng to MAINTAINERS
+* Add index to metadata\_hash column of resource table
+* Incorrect Links are updated
+* Removing unused dependency: discover
+* Use new location of subunit2html
+* Change tox default targets for quick use
+* Fixed identity trust event types
+* gnocchi: quote the resource\_id in url
+* fix metadata for compute cpu notifications
+* support custom metadata
+* Move profiler meters to yaml
+* Control Events RBAC from policy.json
+* Events RBAC needs scoped token
+* make telemetry sample payloads dictionaries
+* Fix requeue process on event handling error
+* allow configurable pipeline partitioning
+* Keep the instance\_type meta from polling and notification consistent
+* Add user\_id,project\_id traits to audit events
+* Change json path's to start with $. for consistency
+* Add validation tests for arithmetic, string and prefix expressions
+* Fix description for "Inapt spelling of 'MongoDB'"
+* Create conf directory during devstack install phase
+* support custom timestamp
+* Add cpu meters to yaml
+* Fix description for "Incorrect spelling of a word"
+* integration: add some new tests
+* Fix disable\_non\_metric\_meters referencing
+* Update tests to reflect WSME 0.8 fixes
+* remove jsonpath-rw requirement
+* Do not use system config file for test
+* gnocchi: move to jsonpath\_rw\_ext
+* Updated from global requirements
+* Allow to run debug tox job for functional tests
+* Use jsonpath\_rw\_ext for meter/event definitions
+* preload jsonpath\_rw parsers
+* integration test: adjusts timeout
+* integration test: failfast
+* Updated from global requirements
+* Avoid recording whole instance info in log
+* Fix dependency for doc build
+* Mark record\_type in PaaS Event Format doc as optional
+* full multi-meter support
+* add flexible grouping key
+* Corrected test\_fallback\_meter\_path test case
+* Add hypervisor inspector sanity check
+* handle list payloads in notifications
+* xenapi: support the session to "unix://local"
+* Introduce Guru Meditation Reports into Ceilometer
+* Use start status of coodinator in tooz
+* Fixed event requeuing/ack on publisher failure
+* Implement consuming metrics from Magnum
+* Avoid from storing samples with empty or not numerical volumes
+* use union all when building trait query
+* Fixed spelling error, retreive -> retrieve
+* Use min and max on IntOpt option types
+* Update install docs with gnocchi dispatcher info
+* Make it possible to run postgresql functional job
+* Revert "Remove version from os\_auth\_url in service\_credentials"
+* Updated from global requirements
+* Use oslo\_config PortOpt support
+* integration: chown ceilometer directory properly
+* add mandatory limit value to complex query list
+* add test to validate jsonpath
+* Remove version from os\_auth\_url in service\_credentials
+* do not translate debug logs
+* Updated from global requirements
+* Grenade plugin using devstack plugin for ceilometer
+* remove alembic requirement
+* Convert instance, bandwidth and SwiftMiddleware meters
+* Change and move the workers options to corresponding service section
+* Drop the downgrade function of migration scripts
+* start rpc deprecation
+* support multiple-meter payloads
+* add poll history to avoid duplicate samples
+* Add Kilo release note reference
+* initialise opencontrail client in tests
+* Make ConnectionRetryTest more reliable
+* Correct thread handling in TranslationHook
+* Updated from global requirements
+* Correctly intialized olso config fixture for TestClientHTTPBasicAuth
+* Don't start up mongodb for unit test coverage
+* disable non-metric meter definitions
+* Cast Int64 values to float
+* Convert identity, sahara and volume to meters yaml
+* Enable entry points for new declarative meters
+* Fix for rgw still throwing errors
+* group pollsters by interval
+* Revert "Revert "remove instance:<flavor> meter""
+* api: fix alarm deletion and update
+* Fixes the kafka publisher
+* Sync devstack plugin with devstack:lib/ceilometer
+* integration: use the right user in gate
+* Imported Translations from Transifex
+* Initial separating unit and functional tests
+* Stop using openstack.common from keystoneclient
+* minimise scope of hmac mocking
+* Updated from global requirements
+* gnocchi: retry with a new token on 401
+* Fix some gabbi tests
+* Improve comments in notification.py
+* mongo: fix last python3 bugs
+* postgres isolation level produces inconsistent reads
+* Masks messaging\_urls in logs during debug mode
+* Corrected unit of snmp based harware disk and memory meters
+* Provide base method for inspect\_memory\_resident
+* Fix Python 3 issue in opendaylight client
+* Fix more tests on Python 3
+* Remove the compute inspector choice restriction
+* [MongoDB] Refactor indexes for meter and resources
+* tests: add an integration test
+* Fix WSGI replacement\_start\_response() on Python 3
+* gnocchi: reduce the number of patch to gnocchi API
+* Make the partition coordinator log more readable
+* Drop out-of-time-sequence rate of change samples
+
+5.0.0.0b2
+---------
+
+* [MongoDB] Use a aggregate pipeline in statistics
+* Instance Cache in Node Discovery Pollster
+* Instance Caching
+* Imported Translations from Transifex
+* fix gnocchi resources yaml
+* Import the api opt group in gabbi fixture
+* Add a batch\_polled\_samples configuration item
+* Remove redundant comma
+* storage: deprecates mongodb\_replica\_set option
+* Improves send\_test\_data tools
+* Replace isotime() with utcnow() and isoformat()
+* distributed coordinated notifications
+* Imported Translations from Transifex
+* Close and dispose test database setup connections
+* Updated from global requirements
+* api: Redirect request to aodh if available
+* api: return 410 if only Gnocchi is enabled
+* Fix broken IPMI agent
+* add mandatory limit value to meter list
+* add mandatory limit value to resource list
+* add mandatory limit value to event list
+* Move gnocchi resources definition in yaml file
+* Send a notification per sample, do not batch
+* Handles dns.domain.exists event in Ceilometer
+* Pollsters now send notifications without doing transforms
+* Imported Translations from Transifex
+* Switch to the oslo\_utils.fileutils
+* Updated from global requirements
+* Use choices for hypervisor\_inspector option
+* The product name Vsphere should be vSphere
+* Add necessary executable permission
+* Store and restore the xtrace option in devstack plugin
+* gnocchi: Remove useless resources patching
+* add Trove(DBaaS) events
+* Set conf.gnocchi\_dispatcher.url explicitly in tests
+* Declarative meters support
+* Stop the tests if backend hasn't started
+* Delay the start of the collector until after apache restart
+* Clean the re-implemented serializers in Ceilometer
+* monkey\_patch thread in tests
+* make notifier default event publisher
+* Fix gnocchi DispatcherTest tests
+* Sort metric data before grouping and processing
+* Namespace functions in devstack plugin
+* Added valid values of operator to response body
+* gnocchi: fixes the instance flavor type
+* gnocchi dispatcher: fix typo in stevedore endpoint
+* Imported Translations from Transifex
+* Tolerate alarm actions set to None
+* Make ceilometer work correctly when hosted with a SCRIPT\_NAME
+* Implementation of dynamically reloadable pipeline
+* fix log msg typo in api utils
+* Updated from global requirements
+* Add documentation about the usage of api-no-pipline
+* drop deprecated pipeline
+* Improve doc strings after changing method for index creation
+* set default limit to meter/sample queries
+* collector: fix test raising error
+* Remove test-requirements-py3.txt
+* remove unused event query
+* Create a devstack plugin for ceilometer
+* Add support for posting samples to notification-agent via API
+* restore long uuid data type
+* Revert "Add support for posting samples to notification-agent via API"
+* Update alarm history only if change in alarm property
+* test error log - catch dummy error
+* fix kafka tests from flooding logs
+* catch warnings from error tests
+* remove unused notifier
+* Add support for posting samples to notification-agent via API
+* Stop dropping deprecated tables while upgrade in mongodb and db2
+* Add handler of sample creation notification
+* Remove the unused get\_targets method of plugin base
+* Replaces methods deprecated in pymongo3.0
+* add oslo.service options
+* Restricts pipeline to have unique source names
+* drop use of oslo.db private attribute
+* Fix oslo.service configuration options building
+* Add fileutils to openstack-common.conf
+* disable non-metric meters
+
+5.0.0.0b1
+---------
+
+* Remove unnecessary executable permission
+* Imported Translations from Transifex
+* Switch to oslo.service
+* Remove unnecessary wrapping of transformer ExtentionManager
+* Port test\_complex\_query to Python 3
+* Fix expected error message on Python 3
+* Fix usage of iterator/list on Python 3
+* Replaces ensure\_index for create\_index
+* pip has its own download cache by default
+* For sake of future python3 encode FakeMemcache hashes
+* Make acl\_scenarios tests' keystonemiddleware cache work flexibly
+* Update version for Liberty
+* Gnocchi Dispatcher support in Ceilometer
+
+5.0.0a0
+-------
+
+* Updated from global requirements
+* Fix alarm rest notifier logging to include severity
+* Remove useless execute bit on rst file
+* Fix unicode/bytes issues in API v2 tests
+* Fix script name in tox.ini for Elasticsearch
+* Fix the meter unit types to be consistent
+* tests: use policy\_file in group oslo\_policy
+* Fix publisher test\_udp on Python 3
+* Fix Ceph object store tests on Python 3
+* Port IPMI to Python 3
+* Port middleware to Python 3
+* [elasticsearch] default trait type to string
+* Updated from global requirements
+* Lower down the range for columns which are being used as uuid
+* Sync with latest oslo-incubator
+* Fix testing of agent manager with tooz
+* Remove deprecated Swift middleware
+* add DNS events
+* Handle database failures on api startup
+* Fix more tests on Python 3
+* Switch to using pbr's autodoc capability
+* Remove old oslo.messaging aliases
+* Remove useless versioninfo and clean ceilometer.conf git exclusion
+* Register oslo\_log options before using them
+* Add running functional scripts for defined backend
+* Remove snapshot.update events as they are not sent
+* WSME version >=0.7 correctly returns a 405
+* TraitText value restricted to max length 255
+* Cause gabbi to skip on no storage sooner
+* Updated from global requirements
+* Move eventlet using commands into own directory
+* adjust alarm post ut code to adapt to upstream wsme
+* Disable rgw pollster when aws module not found
+* Fixes DiskInfoPollster AttributeError exception
+* remove useless log message
+* use oslo.log instead of oslo-incubator code
+* Port test\_inspector to Python 3
+* Fix usage of dictionary methods on Python 3
+* Imported Translations from Transifex
+* Add oslo.vmware to Python 3 test dependencies
+* Optionally create trust for alarm actions
+* Remove iso8601 dependency
+* Enable test\_swift\_middleware on Python 3
+* Enable more tests on Python 3
+* Skip hbase tests on Python 3
+* Clear useless exclude from flake8 ignore in tox
+* Remove pagination code
+* Stop importing print\_function
+* Remove useless release script in tools
+* Remove useless dependency on posix\_ipc
+* Remove exceute bit on HTTP dispatcher
+* Remove oslo.messaging compat from Havana
+* Fixing event types pattern for Role Noti. handler
+* Mask database.event\_connection details in logs
+* Switch from MySQL-python to PyMySQL
+* Python 3: replace long with int
+* Python 3: Replace unicode with six.text\_type
+* Python 3: generalize the usage of the six module
+* Update Python 3 requirements
+* Python 3: set \_\_bool\_\_() method on Namespace
+* Python 3: encode to UTF-8 when needed
+* Python 3: sort tables by their full name
+* Python 3: replace sys.maxint with sys.maxsize
+* Initial commit for functional tests
+* Update a test to properly anticipate HTTP 405 for RestController
+* proposal to add Chris Dent to Ceilometer core
+* rebuild event model only for database writes
+* cleanup problem events logic in event db storage
+* fix incorrect docstring for dispatcher
+* Imported Translations from Transifex
+* api: record severity change in alarm history
+* VMware: verify vCenter server certificate
+* Add hardware memory buffer and cache metrics
+* Make interval optional in pipeline
+* Improve ceilometer-api install documentation
+* empty non-string values are returned as string traits
+* Trait\_\* models have incorrect type for key
+* small change to development.rst file
+* Drop use of 'oslo' namespace package
+* [unittests] Increase agent module unittests coverage
+* stop mocking os.path in test\_setup\_events\_default\_config
+* Remove py33 tox target
+* made change to mod\_wsgi.rst file
+* ensure collections created on upgrade
+* Fix raise error when run "tox -egenconfig"
+* Updated from global requirements
+* Fix None TypeError in neutron process notifications
+
+2015.1.0
+--------
+
+* Have eventlet monkeypatch the time module
+* Have eventlet monkeypatch the time module
+* Add the function of deleting alarm history
+* Updated from global requirements
+* Fix valueerror when ceilometer-api start
+* Override gnocchi\_url configuration in test
+* Move ceilometer/cli.py to ceilometer/cmd/sample.py
+* Fix valueerror when ceilometer-api start
+* remove deprecated partitioned alarm service
+* use message id to generate hbase unique key
+* gnocchi: fix typo in the aggregation endpoint
+* Release Import of Translations from Transifex
+* Fix Copyright date in docs
+* Replace 'metrics' with 'meters' in option and doc
+* use message id to generate hbase unique key
+* update .gitreview for stable/kilo
+* gnocchi: fix typo in the aggregation endpoint
+* broadcast data to relevant queues only
+* Imported Translations from Transifex
+* fix combination alarm with operator == 'or'
+* Updated from global requirements
+
+2015.1.0rc1
+-----------
+
+* proposal to add ZhiQiang Fan to Ceilometer core
+* Open Liberty development
+* Fix a samples xfail test that now succeeds
+* Cosmetic changes for system architecture docs
+* Fix a issue for kafka-publisher and refactor the test code
+* pymongo 3.0 breaks ci gate
+* use oslo.messaging dispatch filter
+* Further mock adjustments to deal with intermittent failure
+* Adds support for default rule in ceilometer policy.json
+* Updated from global requirements
+* limit alarm actions
+* Use oslo\_vmware instead of deprecated oslo.vmware
+* Remove 'samples:groupby' from the Capabilities list
+* Use old name of 'hardware.ipmi.node.temperature'
+* Revert "remove instance:<flavor> meter"
+* Tweak authenticate event definition
+* Add project and domain ID to event definition for identity CRUD
+* Fix the event type for trusts
+* reset croniter to avoid cur time shift
+* Imported Translations from Transifex
+* Avoid a error when py27 and py-mysql tests run in sequence
+* Stop using PYTHONHASHSEED=0 in ceilometer tests
+* remove instance:<flavor> meter
+* Added ipv6 support for udp publisher
+* Remove the unnecessary dependency to netaddr
+* Optimize the flow of getting pollster resources
+* support ability to skip message signing
+* Avoid conflict with existing gnocchi\_url conf value
+* Using oslo.db retry decorator for sample create
+* alarm: Use new gnocchi aggregation API
+* collector: enable the service to listen on IPv6
+* minimise the use of hmac
+* Typo in pylintrc
+* Ceilometer retrieve all images by 'all-tenants'
+* fix incorrect key check in swift notifications
+* support disabling profiler and http meters
+* ensure collections created on upgrade
+* Fix common misspellings
+* Updated from global requirements
+* refuse to post sample which is not supported
+* Enable collector to requeue samples when enabled
+* drop deprecated novaclient.v1\_1
+* exclude precise metaquery in query field
+
+2015.1.0b3
+----------
+
+* Imported Translations from Transifex
+* remove log message when process notification
+* Add gabbi tests for resources
+* Fix typos and format in docstrings in http dispatcher
+* add ability to dispatch events to http target
+* doc: fix class name
+* add ability to publish to multiple topics
+* make field and value attributes mandatory in API Query
+* Fix db2 upgrade in multi-thread run issue
+* Add memory.resident libvirt meter for Ceilometer
+* Update reference
+* Check the namespaces duplication for ceilometer-polling
+* Add gabbi tests to explore the Meter and MetersControllers
+* Imported Translations from Transifex
+* mysql doesn't understand intersect
+* order traits returned within events
+* add network, kv-store, and http events
+* Add support for additional identity events
+* Add a Kafka publisher as a Ceilometer publisher
+* Fix response POST /v2/meters/(meter\_name) to 201 status
+* Attempt to set user\_id for identity events
+* Switch to oslo.policy 0.3.0
+* normalise timestamp in query
+* Add more power and thermal data
+* Updated from global requirements
+* Fix formatting error in licence
+* Added option to allow sample expiration more frequently
+* add option to store raw notification
+* use mongodb distinct
+* remove event\_types ordering assumption
+* Add gabbi tests to cover the SamplesController
+* api: fix alarm creation if time\_constraint is null
+* fix log message format in event.storage.impl\_sqlalchemy
+* Remove duplications from docco
+* Tidy up clean-samples.yaml
+* Fix a few typos in the docs
+* use default trait type in event list query
+* fix wrong string format in libvirt inspector
+* create a developer section and refactor
+* Do not default pecan\_debug to CONF.debug
+* Adding Gabbi Tests to Events API
+* fix config opts in objectstore.rgw
+* Updated from global requirements
+* support time to live on event database for sql backend
+* add an option to disable non-metric meters
+* add missing objectstore entry points
+* Initial gabbi testing for alarms
+* reorganise architecture page
+* Add ceph object storage meters
+* Use oslo\_config choices support
+* fix inline multiple assignment
+* alarming: add gnocchi alarm rules
+* Protect agent startup from import errors in plugins
+* Revert "Add ceph object storage meters"
+* api: move alarm rules into they directory
+* compress events notes
+* Destroy fixture database after each gabbi TestSuite
+* Fix unittests for supporting py-pgsql env
+* Adding links API and CLI query examples
+* correct column types in events
+* Be explicit about using /tmp for temporary datafiles
+* Patch for fixing hardware.memory.used metric
+* Add ceph object storage meters
+* [PostgreSQL] Fix regexp operator
+* Add clean\_exit for py-pgsql unit tests
+* modify events sql schema to reduce empty columns
+* Remove duplicated resource when pollster polling
+* check metering\_connection attribute by default
+* unicode error in event converter
+* cleanup measurements page
+* api: add missing combination\_rule field in sample
+* Fix test case of self-disabled pollster
+* update event architecture diagram
+* use configured max\_retries and retry\_interval for database connection
+* Updated from global requirements
+* Making utilization the default spelling
+* Add Disk Meters for ceilometer
+* correctly leave group when process is stopped
+* Updated from global requirements
+* enable oslo namespace check for ceilometer project
+* Add doc for version list API
+* Enabling self-disabled pollster
+* Use werkzeug to run the developement API server
+* Imported Translations from Transifex
+* switch to oslo\_serialization
+* move non-essential libs to test-requirements
+* Validate default values in config
+* fix the value of query\_spec.maxSample to advoid to be zero
+* clean up to use common service code
+* Add more sql test scenarios
+* [SQLalchemy] Add regex to complex queries
+* Fix duplication in sinks names
+* metering data ttl sql backend breaks resource metadata
+* Refactor unit test code for disk pollsters
+* start recording error notifications
+* Remove no\_resource hack for IPMI pollster
+* Add local node resource for IPMI pollsters
+* Use stevedore to load alarm rules api
+* [MongoDB] Add regex to complex queries
+* Imported Translations from Transifex
+* support time to live on event database for MongoDB
+
+2015.1.0b2
+----------
+
+* split api.controllers.v2
+* add elasticsearch events db
+* use debug value for pecan\_debug default
+* Shuffle agents to send request
+* Updated from global requirements
+* Adds disk iops metrics implementation in Hyper-V Inspector
+* discovery: allow to discover all endpoints
+* Declarative HTTP testing for the Ceilometer API
+* add listener to pick up notification from ceilometermiddleware
+* Drop deprecated namespace for oslo.rootwrap
+* remove empty module tests.collector
+* Add disk latency metrics implementation in Hyper-V Inspector
+* add event listener to collector
+* add notifier publisher for events
+* enable event pipeline
+* Imported Translations from Transifex
+* deprecate swift middleware
+* sync oslo and bring in versionutils
+* Expose alarm severity in Alarm Model
+* Hyper-V: Adds memory metrics implementation
+* Remove mox from requirements
+* Fix IPMI unit test to cover different platforms
+* adjust import group order in db2 ut code
+* add event pipeline
+* remove unexistent module from doc/source/conf.py
+* Upgrade to hacking 0.10
+* Remove the Nova notifier
+* Remove argparse from requirements
+* [MongoDB] Improves get\_meter\_statistics method
+* Fix docs repeating measuring units
+* [DB2 nosql] Create TIMESTAMP type index for 'timestamp' field
+* remove pytidylib and netifaces from tox.ini external dependency
+* Avoid unnecessary API dependency on tooz & ceilometerclient
+* Correct name of "ipmi" options group
+* Fix Opencontrail pollster according the API changes
+* enable tests.storage.test\_impl\_mongodb
+* Remove lockfile from requirements
+* Disable eventlet monkey-patching of DNS
+* Expose vm's metadata to metrics
+* Adding build folders & sorting gitignore
+* Disable proxy in unit test case of test\_bin
+* Add Event and Trait API to document
+* Refactor ipmi agent manager
+* Use alarm's evaluation periods in sufficient test
+* Use oslo\_config instead of deprecated oslo.config
+* Avoid executing ipmitool in IPMI unit test
+* Updated from global requirements
+* Add a direct to database publisher
+* Fixed MagnetoDB metrics title
+* Imported Translations from Transifex
+* Fix incorrect test case name in test\_net.py
+* Updated from global requirements
+* notification agent missing CONF option
+* switch to oslo\_i18n
+* Use right function to create extension list for agent test
+* Imported Translations from Transifex
+* Add an exchange for Zaqar in profiler notification plugin
+* Remove unused pecan configuration options
+* Updated from global requirements
+* Use oslo\_utils instead of deprecated oslo.utils
+* Match the meter names for network services
+* stop using private timeutils attribute
+* Update measurement docs for network services
+* Catch exception when evaluate single alarm
+* Return a meaningful value or raise an excpetion for libvirt
+* Imported Translations from Transifex
+* make transformers optional in pipeline
+* Added metering for magnetodb
+* Add release notes URL for Juno
+* Fix release notes URL for Icehouse
+* remove unnecessary str method when log messages
+* Revert "Remove Sphinx from py33 requirements"
+* untie pipeline manager from samples
+* reset listeners on agent refresh
+* Remove inspect\_instances method from virt
+* Optimize resource list query
+* Synchronize Python 3 requirements
+* Remove unnecessary import\_opt|group
+* Add test data generator via oslo messaging
+* Check to skip to poll and publish when no resource
+* Add oslo.concurrency module to tox --env genconfig
+* add glance events
+* add cinder events
+* Manual update from global requirements
+* Add cmd.polling.CLI\_OPTS to option list
+* Ignore ceilometer.conf
+* Switch to oslo.context library
+
+2015.1.0b1
+----------
+
+* Revert "Skip to poll and publish when no resources found"
+* Added missing measurements and corrected errors in doc
+* Remove Sphinx from py33 requirements
+* Clean up bin directory
+* Improve tools/make\_test\_data.sh correctness
+* ensure unique pipeline names
+* implement notification coordination
+* Make methods static where possible (except openstack.common)
+* Fix docs to suit merged compute/central agents concept
+* Drop anyjson
+* Move central agent code to the polling agent module
+* RBAC Support for Ceilometer API Implementation
+* [SQLalchemy] Add groupby ability resource\_metadata
+* Improve links in config docs
+* Make LBaaS total\_connections cumulative
+* remove useless looping in pipeline
+* Encompassing one source pollsters with common context
+* Modify tests to support ordering of wsme types
+* Make compute discovery pollster-based, not agent-level
+* Add docs about volume/snapshot measurements
+* Port to graduated library oslo.i18n
+* Retry to connect database when DB2 or mongodb is restarted
+* Updated from global requirements
+* Standardize timestamp fields of ceilometer API
+* Workflow documentation is now in infra-manual
+* Add alarm\_name field to alarm notification
+* Updated from global requirements
+* Rely on VM UUID to fetch metrics in libvirt
+* Imported Translations from Transifex
+* Initializing a longer resource id in DB2 nosql backend
+* Sync oslo-incubator code to latest
+* ensure unique list of consumers created
+* fix import oslo.concurrency issue
+* Add some rally scenarios
+* Do not print snmpd password in logs
+* Miniscule typo in metering\_connection help string
+* add http dispatcher
+* [MongoDB] Add groupby ability on resource\_metadata
+* [MongoDB] Fix bug with 'bad' chars in metadatas keys
+* Override retry\_interval in MongoAutoReconnectTest
+* Exclude tools/lintstack.head.py for pep8 check
+* Add encoding of rows and qualifiers in impl\_hbase
+* Database.max\_retries only override on sqlalchemy side
+* Support to capture network services notifications
+* Internal error with period overflow
+* Remove Python 2.6 classifier
+* Enable pep8 on ./tools directory
+* Imported Translations from Transifex
+* Fixes Hyper-V Inspector disk metrics cache issue
+* fix swift middleware parsing
+* Fix order of arguments in assertEqual
+* Updated from global requirements
+* Adapting pylint runner to the new message format
+* Validate AdvEnum & return an InvalidInput on error
+* add sahara and heat events
+* add keystone events to definitions
+* Add timeout to all http requests
+* [MongoDB] Refactor time to live feature
+* transform samples only when transformers exist
+* Updated from global requirements
+* Remove module not really used by Ceilometer
+* Switch to oslo.concurrency
+* Skip to poll and publish when no resources found
+* Change event type for identity trust notifications
+* Add mysql and postgresql in tox for debug env
+* Add new notifications types for volumes/snapshots
+* Add encoding to keys in compute\_signature
+* Tests for system and network aggregate pollsters
+* Add bandwidth to measurements
+* Fix wrong example of capabilities
+* Correct the mongodb\_replica\_set option's description
+* Alarms listing based on "timestamp"
+* Use 'pg\_ctl' utility to start and stop database
+* Correct alarm timestamp field in unittest code
+* Refactor kwapi unit test
+* Remove duplicated config doc
+* VMware: Enable VMware inspector to support any port
+* Clean event method difinition in meter storage base
+* Fix some nits or typos found by chance
+* Add Sample ReST API path in webapi document
+* Enable filter alarms by their type
+* Fix storage.hbase.util.prepare\_key() for 32-bits system
+* Add event storage for test\_hbase\_table\_utils
+* Add per device rate metrics for instances
+* Fix hacking rule H305 imports not grouped correctly
+* Add \_\_repr\_\_ method for sample.Sample
+* remove ordereddict requirement
+* Improve manual.rst file
+* Imported Translations from Transifex
+* Fix columns migrating for PostgreSQL
+* Updated from global requirements
+* Updated from global requirements
+* [MongoDB] Fix bug with reconnection to new master node
+* Updated from global requirements
+* support request-id
+* Update coverage job to references correct file
+* remove reference to model in migration
+* Use oslo\_debug\_helper and remove our own version
+* Allow collector service database connection retry
+* refresh ceilometer architecture documentation
+* Edits assert methods
+* Adds memory stats meter to libvirt inspector
+* Edits assert methods
+* Edits assert methods
+* Edits assert methods
+* Edits assert method
+* Imported Translations from Transifex
+* Imported Translations from Transifex
+* Updated from global requirements
+* add script to generate test event data
+* Handle poorly formed individual sensor readings
+* refactor hbase storage code
+* Avoid clobbering existing class definition
+* Hoist duplicated AlarmService initialization to super
+* Clarify deprecation comment to be accurate
+* Work toward Python 3.4 support and testing
+
+2014.2
+------
+
+* Fix recording failure for system pollster
+* sync and clean up oslo
+* Add missing notification options to the documentation
+* Add missing alarm options to the documentation
+* Add oslo.db to config generator
+* Add missed control exchange options to the documentation
+* Add coordination related options to the documentation
+* Add missing collector options to the documentation
+* switch to oslo-config-generator
+* Edit docs for docs.opentack.org/developer/
+* Add oslo.db to config generator
+* Fix signature validation failure when using qpid message queue
+* clean capabilities
+* move db2 and mongo driver to event tree
+* move sql event driver to event tree
+* move hbase event driver to event tree
+* Sets default encoding for PostgreSQL testing
+* update database dispatcher to use events db
+* Add role assignment notifications for identity
+* add mailmap to avoid dup of authors
+* Add user\_metadata to network samples
+* Fix recording failure for system pollster
+
+2014.2.rc2
+----------
+
+* Manually updated translations
+* Updated from global requirements
+* Creates one database per sql test
+* Adds pylint check for critical error in new patches
+* Fix neutron client to catch 404 exceptions
+* Fix OrderedDict usage for Python 2.6
+* Include a 'node' key and value in ipmi metadata
+* clean path in swift middleware
+* Implement redesigned separator in names of columns in HBase
+* [HBase] Add migration script for new row separate design
+* Imported Translations from Transifex
+* Include a 'node' key and value in ipmi metadata
+* Updated from global requirements
+* Run unit tests against PostgreSQL
+* create skeleton files for event storage backends
+* Imported Translations from Transifex
+* isolate event storage models
+* Fix neutron client to catch 404 exceptions
+* Run unit tests against MySQL
+* Updated from global requirements
+* Correct JSON-based query examples in documentation
+* Open Kilo development
+* Add cfg.CONF.import\_group for service\_credentials
+* Fix OrderedDict usage for Python 2.6
+* clean path in swift middleware
+
+2014.2.rc1
+----------
+
+* Partition static resources defined in pipeline.yaml
+* Per-source separation of static resources & discovery
+* dbsync: Acknowledge 'metering\_connection' option
+* Fix bug in the documentation
+* Use oslo.msg retry API in rpc publisher
+* Describe API versions
+* Change compute agent recurring logs from INFO to DEBUG
+* Fix bug with wrong bool opt value interpolation
+* [HBase] Improves speed of unit tests on real HBase backend
+* Imported Translations from Transifex
+* Removed unused abc meta class
+* update references to auth\_token middleware
+* clean up swift middleware to avoid unicode errors
+* [HBase] Catch AlreadyExists error in Connection upgrade
+* Use None instead of mutables in method params default values
+* Updated from global requirements
+* Enable to get service types from configuration file
+* test db2 driver code
+* Docs: Add description of pipeline discovery section
+* Typo "possibilites" should be "possibilities"
+* Modified docs to update DevStack's config filename
+* Add an API configuration section to docs
+* Tune up mod\_wsgi settings in example configuration
+* Allow pecan debug middleware to be turned off
+* Provide \_\_repr\_\_ for SampleFilter
+* Eliminate unnecessary search for test cases
+* Switch to a custom NotImplementedError
+* minimise ceilometer memory usage
+* Partition swift pollster resources by tenant
+* Add IPMI pollster
+* Add IPMI support
+* Stop using intersphinx
+* Use central agent manager's keystone token in discoveries
+* Handle invalid JSON filters from the input gracefully
+* Sync jsonutils for namedtuple\_as\_object fix
+* ceilometer spamming syslog
+* Timestamp bounds need not be tight (per ceilometer 1288372)
+* Allow to pass dict from resource discovery
+* fix network discovery meters
+* switch to sqlalchemy core
+* Imported Translations from Transifex
+* Improve the timestamp validation of ceilometer API
+* Update docs with Sahara notifications configuration
+* Migrate the rest of the central agent pollsters to use discoveries
+* Add documentation for implemented identity meters
+* Fix tests with testtools>=0.9.39
+* Document the standard for PaaS service notifications
+* Returns 401 when unauthorized project access occurs
+* Adding another set of hardware metrics
+* normalise resource data
+
+2014.2.b3
+---------
+
+* warn against sorting requirements
+* Add validate alarm\_actions schema in alarm API
+* Fix help strings
+* Imported Translations from Transifex
+* Switch partitioned alarm evaluation to a hash-based approach
+* Central agent work-load partitioning
+* collector: Allows to requeue a sample
+* Typo fixed
+* Switch to oslo.serialization
+* Document pipeline publishers configuration
+* Alarm: Use stevedore to load the service class
+* Enhance compute diskio tests to handle multi instance
+* Adding comparison operators in query for event traits
+* XenAPI support: Update measurements documentation
+* update requirements
+* add documentation for setting up api pipeline
+* Permit usage of notifications for metering
+* XenAPI support: Disk rates
+* XenAPI support: Changes for networking metrics
+* XenAPI support: Memory Usage
+* XenAPI support: Changes for cpu\_util
+* XenAPI support: List the instances
+* Rebase hardware pollsters to use new inspector interface
+* Switch to use oslo.db
+* Remove oslo middleware
+* Adding quotas on alarms
+* Add an exchange for Trove in profiler notification plugin
+* Simplify chained comparisons
+* In-code comments should start with \`#\`, not with \`"""\`
+* Remove redundant parentheses
+* skip polls if service is not registered
+* re-add hashseed to avoid gate error
+* Switch to oslo.utils
+* Switch to oslotest
+* Handle sqlalchemy connection strings with drivers
+* Rewrite list creation as a list literal
+* Rewrite dictionary creation as a dictionary literal
+* Triple double-quoted strings should be used for docstrings
+* Add upgrading alarm storage in dbsync
+* Improving of configuration.rst
+* Fix typos in transformer docstrings
+* Update tox.ini pep8 config to ignore i18n functions
+* Added new hardware inspector interface
+* compute: fix wrong test assertion
+* sync olso-incubator code
+* VMware: Support secret host\_password option
+* refactor filter code in sql backend
+* Support for per disk volume measurements
+* Use a FakeRequest object to test middleware
+* Imported Translations from Transifex
+* Improve api\_paste\_config file searching
+* [Hbase] Add column for source filter in \_get\_meter\_samples
+* Issue one SQL statement per execute() call
+* Allow tests to run outside tox
+* [HBase] Refactor hbase.utils
+* Set page size when Glance API request is called
+* Adding init into tools folder
+* Enhancing the make\_test\_data script
+* correct DB2 installation supported features documentation
+* Avoid duplication of discovery for multi-sink sources
+* Improve performance of libvirt inspector requests
+* Documented Stevedore usage and source details
+* Add notifications for identity authenticate events
+* Add message translate module in vmware inspector
+* Handle Cinder attach and detach notifications
+* [HBase] Improve uniqueness for row in meter table
+* Doc enhancement for API service deployment with mod\_wsgi
+* Update documentation for new transformer
+* Add the arithmetic transformer endpoint to setup.cfg
+* Imported Translations from Transifex
+* Fix unit for vpn connection metric
+* Debug env for tox
+* Change spelling mistakes
+* Use auth\_token from keystonemiddleware
+* Fix dict and set order related issues in tests
+* Fix listener for update.start notifications
+* Sahara integration with Ceilometer
+* Add notifications for identity CRUD events
+* Extracting make\_resource\_metadata method
+* Fix make\_test\_data tools script
+* Add cumulative and gauge to aggregator transformer
+* Enable some tests against py33
+* Remove --tmpdir from mktemp
+* Replace dict.iteritems() with six.iteritems(dict)
+* Replace iterator.next() with next(iterator)
+* Fix aggregator flush method
+* Automatic discovery of TripleO Overcloud hardware
+* Set python hash seed to 0 in tox.ini
+* Don't override the original notification message
+* Remove ConnectionProxy temporary class
+* Move sqlalchemy alarms driver code to alarm tree
+* basestring replaced with six.string\_types
+* Correct misspelled words
+
+2014.2.b2
+---------
+
+* Add retry function for alarm REST notifier
+* Move hbase alarms driver code to alarm tree
+* Update measurement docs for FWaaS
+* Update measurement docs for VPNaaS
+* Follow up fixes to network services pollsters
+* Updated from global requirements
+* Implement consuming ipmi notifications from Ironic
+* Support for metering FWaaS
+* Adds Content-Type to alarm REST notifier
+* Multi meter arithmetic transformer
+* Remove redudent space in doc string
+* Use None instead of mutables in test method params defaults
+* Add support for metering VPNaaS
+* Use resource discovery for Network Services
+* Change of get\_events and get\_traits method in MongoDB and Hbase
+* Fix two out-dated links in doc
+* Move log alarms driver code to alarm tree
+* Separate the console scripts
+* clean up event model
+* improve expirer performance for sql backend
+* Move mongodb/db2 alarms driver code to alarm tree
+* Allow to have different DB for alarm and metering
+* Replace datetime of time\_constraints by aware object
+* Sync oslo log module and its dependencies
+* Use hmac.compare\_digest to compare signature
+* Add testcase for multiple discovery-driven sources
+* Fixes aggregator transformer timestamp and user input handling
+* Improves pipeline transformer documentation
+* Fix incorrect use of timestamp in test
+* Add keystone control exchange
+* Fix call to meter-list in measurements doc
+* Remove redundant parentheses
+* [Mongodb] Implement events on Mongodb and DB2
+* Fix typos in code comments & docstrings
+* Make the error message of alarm-not-found clear
+* Fix SQL exception getting statitics with metaquery
+* Remove docutils pin
+* update default\_log\_levels set by ceilometer
+* Fix annoying typo in partition coordinator test
+* Transform sample\_cnt type to int
+* Remove useless sources.json
+* Fix H405 violations and re-enable gating
+* Fix H904 violations and re-enable gating
+* Fix H307 violations and re-enable gating
+* Fix the section name in CONTRIBUTING.rst
+* Added osprofiler notifications plugin
+* Improve a bit performance of Ceilometer
+* Revert "Align to openstack python package index mirror"
+* Fix aggregator \_get\_unique\_key method
+* Remove meter hardware.network.bandwidth.bytes
+* Fix F402 violations and re-enable gating
+* Fix E265 violations and re-enable gating
+* Fix E251 violations and re-enable gating
+* Fix E128 violations and re-enable gating
+* Fix E126,H104 violations and re-enable gating
+* Bump hacking to 0.9.x
+* Fixed various import issues exposed by unittest
+* use urlparse from six
+* clean up sample index
+* Fix HBase available capabilities list
+* Updated from global requirements
+* VMware:Update the ceilometer doc with VMware opts
+* Handle non-ascii character in meter name
+* Add log output of "x-openstack-request-id" from nova
+* Imported Translations from Transifex
+* fix StringIO errors in unit test
+* Fix hacking rule 302 and enable it
+* Imported Translations from Transifex
+* sync oslo code
+* Fixes ceilometer-compute service start failure
+* Reenables the testr per test timeout
+* Avoid reading real config files in unit test
+* Clean up oslo.middleware.{audit,notifier}
+* Use hacking from test-requirements
+* Splits hbase storage code base
+* Splits mongo storage code base
+* Separate alarm storage models from other models
+* Iterates swift response earlier to get the correct status
+* Fix messaging.get\_transport caching
+* Fix method mocked in a test
+* Don't keep a single global TRANSPORT object
+* Clean up .gitignore
+* Fix Sphinx directive name in session.py
+* Fix list of modules not included in auto-gen docs
+* Downgrade publisher logging to debug level again
+
+2014.2.b1
+---------
+
+* remove default=None for config options
+* [HBase] get\_resource optimization
+* Fix incorrect trait initialization
+* Remove unused logging in tests
+* Revert "Fix the floatingip pollster"
+* Remove low-value logging from publication codepath
+* Fix LBaaS connection meter docs
+* Fix the meter type for LB Bytes
+* Adding alarm list filtering by state and meter
+* Adds caches for image and flavor in compute agent
+* [HBase] Implement events on HBase
+* Skipping central agent pollster when keystone not available
+* Respect $TMPDIR environment variable to run tests
+* Fixed unit test TestRealNotification
+* Update Measurement Docs for LBaaS
+* Metering LoadBalancer as a Service
+* Removes per test testr timeout
+* Change pipeline\_manager to instance attribute in hooks
+* Change using of limit argument in get\_sample
+* Refactor tests to remove direct access to test DBManagers
+* Fix notification for NotImplemented record\_events
+* Add missing explicit cfg option import
+* Fix ceilometer.alarm.notifier.trust import
+* Use TYPE\_GAUGE rather than TYPE\_CUMULATIVE
+* Update doc for sample config file issue
+* Corrects a flaw in the treatment of swift endpoints
+* use LOG instead of logger as name for the Logger object
+* Fix doc gate job false success
+* Improve performance of api requests with hbase scan
+* Add new 'storage': {'production\_ready': True} capability
+* Clean tox.ini
+* Remove (c) and remove unnecessary encoding lines
+* Fix testing gate due to new keystoneclient release
+* Ignore the generated file ceilometer.conf.sample
+* Update the copyright date in doc
+* Updated from global requirements
+* reconnect to mongodb on connection failure
+* refactor sql backend to improve write speed
+* Don't rely on oslomsg configuration options
+* replaced unicode() with six.text\_type()
+* Synced jsonutils from oslo-incubator
+* Fix the floatingip pollster
+* Fix project authorization check
+* Update testrepository configuration
+* Implemented metering for Cinder's snapshots
+* Use joins instead of subqueries for metadata filtering
+* Use None instead of mutables in method params defaults
+* Remove all mostly untranslated PO files
+* switch SplitResult to use six
+* Remove unused db code due to api v1 drop
+* Updated from global requirements
+* oslo.messaging context must be a dict
+* Drop deprecated api v1
+* Fix network notifications of neutron bulk creation
+* mongo: remove \_id in inserted alarm changes
+* Clean up openstack-common.conf
+* Revert "oslo.messaging context must be a dict"
+* Correct class when stopping partitioned alarm eval svc
+* oslo.messaging context must be a dict
+* Corrections of spelling, rephrasing for clarity
+* Adapt failing tests for latest wsme version
+* Removed StorageEngine class and it's hierarchy
+* Correcting formatting and adding period in measurement doc
+* Initialize dispatcher manager in event endpoint
+* Replaced CONF object with url in storage engine creation
+* Synced jsonutils from oslo-incubator
+* Remove gettextutils.\_ imports where they are not used
+* Remove "# noqa" leftovers for gettextutils.\_
+* transformer: Add aggregator transformer
+* Remove conversion debug message
+* Fix the return of statistic with getting no sample
+* Remove eventlet.sleep(0) in collector tests
+* Don't allow queries with 'IN' predicate with an empty sequence
+* Check if samples returned by get\_sample\_data are not None
+* Opencontrail network statistics driver
+* Add a alarm notification using trusts
+* Replace hard coded WSGI application creation
+* Describe storage backends in the collector installation guide
+* Made get\_capabilities a classmethod instead of object method
+* Disable reverse dns lookup
+* Consume notif. from multiple message bus
+* Use NotificationPlugin as an oslo.msg endpoint
+* Improve combination rule validation
+* Remove ceilometer.conf.sample
+* Use known protocol scheme in keystone tests
+* cleanup virt pollster code
+* Add encoding argument to deserialising udp packets in collector
+* Made get\_engine method module-private
+* Make entities (Resource, User, Project) able to store lists
+* Remove duplicate alarm from alarm\_ids
+* More accurate meter name and unit for host load averages
+* Replace oslo.rpc by oslo.messaging
+* Fix a response header bug in the error middleware
+* Remove unnecessary escape character in string format
+* Optimize checks to set image properties in metadata
+* fix statistics query in postgres
+* Removed useless code from \_\_init\_\_ method
+* Refactored fake connection URL classes
+* Replace assert statements with assert methods
+* Removes direct access of timeutils.override\_time
+* Disable specifying alarm itself in combination rule
+* Include instance state in metadata
+* Allowed nested resource metadata in POST'd samples
+* Sync oslo-incubator code
+* Updated from global requirements
+* Refactor the DB implementation of Capabilities API
+* Fix Jenkins translation jobs
+* Align to openstack python package index mirror
+* User a more accurate max\_delay for reconnects
+* Open Juno development
+
+2014.1.rc1
+----------
+
+* Imported Translations from Transifex
+* Add note on aggregate duplication to API docco
+* Use ConectionPool instead of one Connection in HBase
+* remove dump tables from previous migrations
+* De-dupe selectable aggregate list in statistics API
+* ensure dispatcher service is configured before rpc
+* improve performance of resource-list in sql
+* SSL errors thrown with Postgres on multi workers
+* Remove escape character in string format
+* Verify user/project ID for alarm created by non-admin user
+* enable a single worker by default
+* Fix ceilometer.conf.sample mismatch
+* Metadata in compute.instance.exists fix
+* Fix order of arguments in assertEquals
+* Documenting hypervisor support for nova meters
+* Ensure idempotency of cardinality reduction in mongo
+* VMware vSphere: Improve the accuracy of queried samples
+* Use swob instead of webob in swift unit tests
+* Disable oslo.messaging debug logs
+* Fix validation error for invalid field name in simple query
+* fix create\_or\_update logic to avoid rollbacks
+* Avoid swallowing AssertionError in test skipping logic
+* Fix hardware pollster to inspect multiple resources
+* spawn multiple workers in services
+* Install global lazy \_()
+* Fixes Hyper-V metrics units
+* Ensure intended indices on project\_id are created for mongo
+* Fix the type of the disk IO rate measurements
+* Change the sample\_type from tuple to string
+* Fix order of arguments in assertEquals
+* Ensure alarm rule conform to alarm type
+* insecure flag added to novaclient
+* Fixes duplicated names in alarm time constraints
+* Use the list when get information from libvirt
+* Eventlet monkeypatch must be done before anything
+* 028 migration script incorrectly skips over section
+* Fix bug in get\_capabilities behavior in DB drivers
+* Added documentation for selectable aggregates
+* Make sure use IPv6 sockets for ceilometer in IPv6 environment
+* VMware vSphere: Bug fixes
+* Ensure insecure config option propagated by alarm evaluator
+* Fix order of arguments in assertEquals
+* Fix order of arguments in assertEquals
+* Fix order of arguments in assertEquals
+* Rationalize get\_resources for mongodb
+* Ensure insecure config option propagated by alarm service
+* add host meters to doc
+* Add field translation to complex query from OldSample to Sample
+* Extend test case to cover old alarm style conversion
+* Updated doc with debug instructions
+* Refactored the way how testscenarios tests are run
+* Corrected the sample names in hardware pollsters
+* Prevent alarm\_id in query field of getting history
+* Make ceilometer work with sqla 0.9.x
+* Implements monitoring-network-from-opendaylight
+* Add user-supplied arguments in log\_handler
+* VMware vSphere support: Disk rates
+* Fix updating alarm can specify existing alarm name
+* Changes for networking metrics support for vSphere
+* VMware vSphere: Changes for cpu\_util
+* VMware vSphere support: Memory Usage
+* Fix broken statistics in sqlalchemy
+* Fixes Hyper-V Inspector network metrics values
+* Set storage engine for the trait\_type table
+* Enable monkeypatch for select module
+* Rename id to alarm\_id of Alarm in SqlAlchemy
+* Fix some spelling mistakes and a incorrect url
+* Skip central agent interval\_task when keystone fails
+
+2014.1.b3
+---------
+
+* Ensure user metadata mapped for instance notifications
+* Per pipeline pluggable resource discovery
+* Wider selection of aggregates for sqlalchemy
+* Wider selection of aggregates for mongodb
+* Adds time constraints to alarms
+* Remove code duplication Part 3
+* Decouple source and sink configuration for pipelines
+* Selectable aggregate support in mongodb
+* Selectable aggregation functions for statistics
+* Add simple capabilities API
+* Removed global state modification by api test
+* VMware vSphere support: Performance Mgr APIs
+* Fix typo
+* move databases to test requirements
+* Make recording and scanning data more determined
+* Implements "not" operator for complex query
+* Implements metadata query for complex query feature
+* Alarms support in HBase Part 2
+* Alarm support in HBase Part 1
+* Remove unused variable
+* Added hardware pollsters for the central agent
+* Added hardware agent's inspector and snmp implementation
+* Updated from global requirements
+* Pluggable resource discovery for agents
+* Remove code duplication Part 2
+* Imported Translations from Transifex
+* remove audit logging on flush
+* Tolerate absent recorded\_at on older mongo/db2 samples
+* api: export recorded\_at in returned samples
+* Fix the way how metadata is stored in HBase
+* Set default log level of iso8601 to WARN
+* Sync latest config file generator from oslo-incubator
+* Fix typo on testing doc page
+* Remove code duplication
+* sample table contains redundant/duplicate data
+* rename meter table to sample
+* storage: store recording timestamp
+* Fixed spelling error in Ceilometer
+* Adds doc string to query validate functions in V2 API
+* Updated from global requirements
+* Remove code that works around a (now-resolved) bug in pecan
+* Fix missing source field content on /v2/samples API
+* Refactor timestamp existence validation in V2 API
+* Use the module units to refer bytes type
+* sync units.py from oslo to ceilometer
+* Add comments for \_build\_paginate\_query
+* Implements monitoring-network
+* Handle Heat notifications for stack CRUD
+* Alembic migrations not tested
+* Modify the discription of combination alarm
+* check domain state before inspecting nics/disks
+* Adds gettextutils module in converter
+* Keep py3.X compatibility for urllib.urlencode
+* Added missing import
+* Removed useless prints that pollute tests log
+* Implements in operator for complex query functionality
+* Implements field validation for complex query functionality
+* allow hacking to set dependencies
+* Implements complex query functionality for alarm history
+* Implements complex query functionality for alarms
+* Remove None for dict.get()
+* Replace assertEqual(None, \*) with assertIsNone in tests
+* Update notification\_driver
+* Switch over to oslosphinx
+* Fix some flaws in ceilometer docstrings
+* Rename Openstack to OpenStack
+* Remove start index 0 in range()
+* Updated from global requirements
+* Remove blank line in docstring
+* Use six.moves.urllib.parse instead of urlparse
+* Propogate cacert and insecure flags to glanceclient
+* Test case for creating an alarm without auth headers
+* Refactored run-tests script
+* Implements complex query functionality for samples
+* fix column name and alignment
+* Remove tox locale overrides
+* Updated from global requirements
+* Adds flavor\_id in the nova\_notifier
+* Improve help strings
+* service: re-enable eventlet just for sockets
+* Fixes invalid key in Neutron notifications
+* Replace BoundedInt with WSME's IntegerType
+* Replace 'Ceilometer' by 'Telemetry' in the generated doc
+* Doc: Add OldSample to v2.rst
+* Fixing some simple documentation typos
+* Updated from global requirements
+* Fix for a simple typo
+* Replace 'a alarm' by 'an alarm'
+* Move ceilometer-send-counter to a console script
+* sync oslo common code
+* Handle engine creation inside of Connection object
+* Adds additional details to alarm notifications
+* Fix formating of compute-nova measurements table
+* Fix string-to-boolean casting in queries
+* nova notifier: disable tests + update sample conf
+* Update oslo
+* Refactored session access
+* Fix the py27 failure because of "ephemeral\_key\_uuid" error
+* Correct a misuse of RestController in the Event API
+* Fix docs on what an instance meter represents
+* Fix measurement docs to correctly represent Existance meters
+* samples: fix test case status code check
+* Replace non-ascii symbols in docs
+* Use swift master
+* Add table prefix for unit tests with hbase
+* Add documentation for pipeline configuration
+* Remove unnecessary code from alarm test
+* Updated from global requirements
+* Use stevedore's make\_test\_instance
+* use common code for migrations
+* Use explicit http error code for api v2
+* Clean .gitignore
+* Remove unused db engine variable in api
+* Revert "Ensure we are not exhausting the sqlalchemy pool"
+* eventlet: stop monkey patching
+* Update dev docs to include notification-agent
+* Change meter\_id to meter\_name in generated docs
+* Correct spelling of logger for dispatcher.file
+* Fix some typos in architecture doc
+* Drop foreign key contraints of alarm in sqlalchemy
+* Re-enable lazy translation
+* Sync gettextutils from Oslo
+* Fix wrong doc string for meter type
+* Fix recursive\_keypairs output
+* Added abc.ABCMeta metaclass for abstract classes
+* Removes use of timeutils.set\_time\_override
+
+2014.1.b2
+---------
+
+* tests: kill all started processes on exit
+* Exclude weak datapoints from alarm threshold evaluation
+* Move enable\_acl and debug config to ceilometer.conf
+* Fix the Alarm documentation of Web API V2
+* StringIO compatibility for python3
+* Set the SQL Float precision
+* Convert alarm timestamp to PrecisionTimestamp
+* use six.move.xrange replace xrange
+* Exit expirer earlier if db-ttl is disabled
+* Added resources support in pollster's interface
+* Improve consistency of help strings
+* assertTrue(isinstance) replace by assertIsInstance
+* Return trait type from Event api
+* Add new rate-based disk and network pipelines
+* Name and unit mapping for rate\_of\_change transformer
+* Update oslo
+* Remove dependencies on pep8, pyflakes and flake8
+* Implement the /v2/samples/<sample-id> API
+* Fix to handle null threshold\_rule values
+* Use DEFAULT section for dispatcher in doc
+* Insertion in HBase should be fixed
+* Trivial typo
+* Update ceilometer.conf.sample
+* Fix use the fact that empty sequences are false
+* Remove unused imports
+* Replace mongo aggregation with plain ol' map-reduce
+* Remove redundant meter (name,type,unit) tuples from Resource model
+* Fix work of udp publisher
+* tests: pass /dev/null as config for mongod
+* requirements: drop netaddr
+* tests: allow to skip if no database URL
+* Fix to tackle instances without an image assigned
+* Check for pep8 E226 and E24
+* Fixed spelling mistake
+* AlarmChange definition added to doc/source/webapi/v2.rst
+* 1st & last sample timestamps in Resource representation
+* Avoid false negatives on message signature comparison
+* cacert is not picked up correctly by alarm services
+* Change endpoint\_type parameter
+* Utilizes assertIsNone and assertIsNotNone
+* Add missing gettextutils import to ceilometer.storage.base
+* Remove redundant code in nova\_client.Client
+* Allow customized reseller\_prefix in Ceilometer middleware for Swift
+* Fix broken i18n support
+* Empty files should no longer contain copyright
+* Add Event API
+* Ensure we are not exhausting the sqlalchemy pool
+* Add new meters for swift
+* Sync config generator workaround from oslo
+* storage: factorize not implemented methods
+* Don't assume alarms are returned in insert order
+* Correct env variable in file oslo.config.generator.rc
+* Handle the metrics sent by nova notifier
+* Add a wadl target to the documentation
+* Sync config generator from oslo-incubator
+* Convert event timestamp to PrecisionTimestamp
+* Add metadata query validation limitation
+* Ensure the correct error message is displayed
+* Imported Translations from Transifex
+* Move sphinxcontrib-httpdomain to test-requirements
+* Ensure that the user/project exist on alarm update
+* api: raise ClientSideError rather than ValueError
+* Implement the /v2/sample API
+* service: fix service alive checking
+* Oslo sync to recover from db2 server disconnects
+* Event Storage Layer
+* config: specify a template for mktemp
+* test code should be excluded from test coverage summary
+* doc: remove note about Nova plugin framework
+* doc: fix formatting of alarm action types
+* Updated from global requirements
+* Add configuration-driven conversion to Events
+* add newly added constraints to expire clear\_expired\_metering\_data
+* fix unit
+* Add import for publisher\_rpc option
+* add more test cases to improve the test code coverage #5
+* Create a shared queue for QPID topic consumers
+* Properly reconnect subscribing clients when QPID broker restarts
+* Don't need session.flush in context managed by session
+* sql migration error in 020\_add\_metadata\_tables
+
+2014.1.b1
+---------
+
+* Remove rpc service from agent manager
+* Imported Translations from Transifex
+* organise requirements files
+* Add a Trait Type model and db table
+* No module named MySQLdb bug
+* Add a note about permissions to ceilometer logging directory
+* sync with oslo-incubator
+* Rename OpenStack Metering to OpenStack Telemetry
+* update docs to adjust for naming change
+* Add i18n warpping for all LOG messages
+* Imported Translations from Transifex
+* Removed unused method in compute agent manger
+* connection is not close in migration script
+* Fixed a bug in sql migration script 020
+* Fixed nova notifier test
+* Added resources definition in the pipeline
+* Change metadata\_int's value field to type bigint
+* Avoid intermittent integrity error on alarm creation
+* Simplify the dispatcher method prototype
+* Use map\_method from stevedore 0.12
+* Remove the collector submodule
+* Move dispatcher a level up
+* Split collector
+* Add a specialized Event Type model and db table
+* Remove old sqlalchemy-migrate workaround
+* Revert "Support building wheels (PEP-427)"
+* full pep8 compliance (part 2)
+* Selectively import RPC backend retry config
+* Fixes Hyper-V Inspector disk metrics bug
+* Imported Translations from Transifex
+* full pep8 compliance (part1)
+* Replace mox with mock in alarm,central,image tests
+* Stop ignoring H506 errors
+* Update hacking for real
+* Replace mox with mock in tests.collector
+* Replace mox with mock in publisher and pipeline
+* Replace mox with mock in novaclient and compute
+* Remove useless defined Exception in tests
+* Support building wheels (PEP-427)
+* Fixes Hyper-V Inspector cpu metrics bug
+* Replace mox with mock in tests.storage
+* Document user-defined metadata for swift samples
+* Replace mox with mock in energy and objectstore
+* Updated from global requirements
+* Replace mox with mock in tests.api.v2
+* Refactor API error handling
+* make record\_metering\_data concurrency safe
+* Move tests into ceilometer module
+* Replace mox with mock in tests.api.v1
+* Replace mox with mock in tests.api.v2.test\_compute
+* Corrected import order
+* Use better predicates from testtools instead of plain assert
+* Stop using openstack.common.exception
+* Replace mox with mock in tests.network
+* Replace mox with mocks in test\_inspector
+* Fix failing nova\_tests tests
+* Replace mox with mocks in tests.compute.pollsters
+* Add an insecure option for Keystone client
+* Sync log from oslo
+* Cleanup tests.publisher tests
+* mongodb, db2: do not print full URL in logs
+* Use wsme ClientSideError to handle unicode string
+* Use consistant cache key for swift pollster
+* Fix the developer documentation of the alarm API
+* Fix the default rpc policy value
+* Allow Events without traits to be returned
+* Replace tests.base part8
+* Replace tests.base part7
+* Replace tests.base part6
+* Imported Translations from Transifex
+* Imported Translations from Transifex
+* Sync log\_handler from Oslo
+* Don't use sqlachemy Metadata as global var
+* enable sql metadata query
+* Replace tests.base part5
+* Replace tests.base part4
+* Imported Translations from Transifex
+* Updated from global requirements
+* Fix doc typo in volume meter description
+* Updated from global requirements
+* Add source to Resource API object
+* compute: virt: Fix Instance creation
+* Fix for get\_resources with postgresql
+* Updated from global requirements
+* Add tests when admin set alarm owner to its own
+* Replace tests.base part3
+* Replace tests.base part2
+* Replace tests.base part1
+* Fix wrong using of Metadata in 15,16 migrations
+* api: update for WSME 0.5b6 compliance
+* Changes FakeMemcache to set token to expire on utcnow + 5 mins
+* Change test case get\_alarm\_history\_on\_create
+* Change alarm\_history.detail to text type
+* Add support for keystoneclient 0.4.0
+* Ceilometer has no such project-list subcommand
+* Avoid leaking admin-ness into combination alarms
+* Updated from global requirements
+* Avoid leaking admin-ness into threshold-oriented alarms
+* Update Oslo
+* Set python-six minimum version
+* Ensure combination alarms can be evaluated
+* Ensure combination alarm evaluator can be loaded
+* Apply six for metaclass
+* add more test cases to improve the test code coverage #6
+* Update python-ceilometerclient lower bound to 1.0.6
+* Imported Translations from Transifex
+* add more test cases to improve the test code coverage #4
+
+2013.2.rc1
+----------
+
+* db2 does not allow None as a key for user\_id in user collection
+* Start Icehouse development
+* Imported Translations from Transifex
+* Disable lazy translation
+* Add notifications for alarm changes
+* Updated from global requirements
+* api: allow alarm creation for others project by admins
+* assertEquals is deprecated, use assertEqual
+* Imported Translations from Transifex
+* update alarm service setup in dev doc
+* Add bug number of some wsme issue
+* api: remove useless comments
+* issue an error log when cannot import libvirt
+* add coverage config file to control module coverage report
+* tests: fix rounding issue in timestamp comparison
+* api: return 404 if a alarm is not found
+* remove locals() for stringformat
+* add more test cases to improve the test code coverage #3
+* Remove extraneous vim configuration comments
+* Return 401 when action is not authorized
+* api: return 404 if a resource is not found
+* keystone client changes in AuthProtocol made our test cases failing
+* Don't load into alarms evaluators disabled alarms
+* Remove MANIFEST.in
+* Allow to get a disabled alarm
+* Add example with return values in API v2 docs
+* Avoid imposing alembic 6.0 requirement on all distros
+* tests: fix places check for timestamp equality
+* Don't publish samples if resource\_id in missing
+* Require oslo.config 1.2.0 final
+* Don't send unuseful rpc alarm notification
+* service: check that timestamps are almost equals
+* Test the response body when deleting a alarm
+* Change resource.resource\_metadata to text type
+* Adding region name to service credentials
+* Fail tests early if mongod is not found
+* add more test cases to improve the test code coverage #2
+* add more test cases to improve the test code coverage #1
+* Imported Translations from Transifex
+* Replace OpenStack LLC with OpenStack Foundation
+* Use built-in print() instead of print statement
+* Simple alarm partitioning protocol based on AMQP fanout RPC
+* Handle manually mandatory field
+* Provide new API endpoint for alarm state
+* Implement the combination evaluator
+* Add alarm combination API
+* Notify with string representation of alarm reason
+* Convert BoundedInt value from json into int
+* Fix for timestamp precision in SQLAlchemy
+* Add source field to Meter model
+* Refactor threshold evaluator
+* Alarm API update
+* Update requirements
+* WSME 0.5b5 breaking unit tests
+* Fix failed downgrade in migrations
+* refactor db2 get\_meter\_statistics method to support mongodb and db2
+* tests: import pipeline config
+* Fix a tiny mistake in api doc
+* collector-udp: use dispatcher rather than storage
+* Imported Translations from Transifex
+* Drop sitepackages=False from tox.ini
+* Update sphinxcontrib-pecanwsme to 0.3
+* Architecture enhancements
+* Force MySQL to use InnoDB/utf8
+* Update alembic requirement to 0.6.0 version
+* Correctly output the sample content in the file publisher
+* Pecan assuming meter names are extensions
+* Handle inst not found exceptions in pollsters
+* Catch exceptions from nova client in poll\_and\_publish
+* doc: fix storage backend features status
+* Add timestamp filtering cases in storage tests
+* Imported Translations from Transifex
+* Use global openstack requirements
+* Add group by statistics examples in API v2 docs
+* Add docstrings to some methods
+* add tests for \_query\_to\_kwargs func
+* validate counter\_type when posting samples
+* Include auth\_token middleware in sample config
+* Update config generator
+* run-tests: fix MongoDB start wait
+* Imported Translations from Transifex
+* Fix handling of bad paths in Swift middleware
+* Drop the \*.create.start notification for Neutron
+* Make the Swift-related doc more explicit
+* Fix to return latest resource metadata
+* Update the high level architecture
+* Alarm history storage implementation for sqlalchemy
+* Improve libvirt vnic parsing with missing mac!
+* Handle missing libvirt vnic targets!
+* Make type guessing for query args more robust
+* add MAINTAINERS file
+* nova\_notifier: fix tests
+* Update openstack.common.policy from oslo-incubator
+* Clean-ups related to alarm history patches
+* Improved MongoClient pooling to avoid out of connections error
+* Disable the pymongo pooling feature for tests
+* Fix wrong migrations
+* Fixed nova notifier unit test
+* Add group by statistics in API v2
+* Update to tox 1.6 and setup.py develop
+* Add query support to alarm history API
+* Reject duplicate events
+* Fixes a bug in Kwapi pollster
+* alarm api: rename counter\_name to meter\_name
+* Fixes service startup issue on Windows
+* Handle volume.resize.\* notifications
+* Network: process metering reports from Neutron
+* Alarm history storage implementation for mongodb
+* Fix migration with fkeys
+* Fixes two typos in this measurements.rst
+* Add a fake UUID to Meter on API level
+* Append /usr/sbin:/sbin to the path for searching mongodb
+* Plug alarm history logic into the API
+* Added upper version boundry for six
+* db2 distinct call results are different from mongodb call
+* Sync rpc from oslo-incubator
+* Imported Translations from Transifex
+* Add pagination parameter to the database backends of storage
+* Base Alarm history persistence model
+* Fix empty metadata issue of instance
+* alarm: generate alarm\_id in API
+* Import middleware from Oslo
+* Imported Translations from Transifex
+* Adds group by statistics for MongoDB driver
+* Fix wrong UniqueConstraint name
+* Adds else and TODO in statistics storage tests
+* Imported Translations from Transifex
+* Extra indexes cleanup
+* API FunctionalTest class lacks doc strings
+* install manual last few sections format needs to be fixed
+* api: update v1 for Flask >= 0.10
+* Use system locale when Accept-Language header is not provided
+* Adds Hyper-V compute inspector
+* missing resource in middleware notification
+* Support for wildcard in pipeline
+* Refactored storage tests to use testscenarios
+* doc: replace GitHub by git.openstack.org
+* api: allow usage of resource\_metadata in query
+* Remove useless doc/requirements
+* Fixes non-string metadata query issue
+* rpc: reduce sleep time
+* Move sqlachemy tests only in test\_impl\_sqlachemy
+* Raise Error when pagination/groupby is missing
+* Raise Error when pagination support is missing
+* Use timeutils.utcnow in alarm threshold evaluation
+* db2 support
+* plugin: remove is\_enabled
+* Doc: improve doc about Nova measurements
+* Storing events via dispatchers
+* Imported Translations from Transifex
+* ceilometer-agent-compute did not catch exception for disk error
+* Change counter to sample in network tests
+* Change counter to sample in objectstore tests
+* Remove no more used code in test\_notifier
+* Change counter to sample vocable in cm.transformer
+* Change counter to sample vocable in cm.publisher
+* Change counter to sample vocable in cm.image
+* Change counter to sample vocable in cm.compute
+* Change counter to sample vocable in cm.energy
+* Use samples vocable in cm.publisher.test
+* Change counter to sample vocable in volume tests
+* Change counter to sample vocable in api tests
+* Add the source=None to from\_notification
+* Make RPCPublisher flush method threadsafe
+* Enhance delayed message translation when \_ is imported
+* Remove use\_greenlets argument to MongoClient
+* Enable concurrency on nova notifier tests
+* Imported Translations from Transifex
+* Close database connection for alembic env
+* Fix typo in 17738166b91 migration
+* Don't call publisher without sample
+* message\_id is not allowed to be submitted via api
+* Api V2 post sample refactoring
+* Add SQLAlchemy implementation of groupby
+* Fixes failed notification when deleting instance
+* Reinitialize pipeline manager for service restart
+* Sync gettextutils from oslo-incubator
+* Doc: clearly state that one can filter on metadata
+* Add HTTP request/reply samples
+* Use new olso fixture in CM tests
+* Imported Translations from Transifex
+* Bump hacking to 0.7.0
+* Fix the dict type metadata missing issue
+* Raise error when period with negative value
+* Imported Translations from Transifex
+* Import missing gettext \_
+* Remove 'counter' occurences in pipeline
+* Remove the mongo auth warning during tests
+* Change the error message of resource listing in mongodb
+* Change test\_post\_alarm case in test\_alarm\_scenarios
+* Skeletal alarm history API
+* Reorg alarms controller to facilitate history API
+* Fix Jenkins failed due to missing \_
+* Fix nova test\_notifier wrt new notifier API
+* Remove counter occurences from documentation
+* Updated from global requirements
+* Fixes dict metadata query issue of HBase
+* s/alarm/alarm\_id/ in alarm notification
+* Remove unused abstract class definitions
+* Removed unused self.counters in storage test class
+* Initial alarming documentation
+* Include previous state in alarm notification
+* Consume notification from the default queue
+* Change meter.resource\_metadata column type
+* Remove MongoDB TTL support for MongoDB < 2.2
+* Add first and last sample timestamp
+* Use MongoDB aggregate to get resources list
+* Fix resources/meters pagination test
+* Handle more Nova and Neutron events
+* Add support for API message localization
+* Add the alarm id to the rest notifier body
+* fix alarm notifier tests
+* Sync gettextutils from oslo
+* Fix generating coverage on MacOSX
+* Use the new nova Instance class
+* Return message\_id in POSTed samples
+* rpc: remove source argument from message conversion
+* Remove source as a publisher argument
+* Add repeat\_actions to alarm
+* Rename get\_counters to get\_samples
+* Add pagination support for MongoDB
+* Doc: measurements: add doc on Cinder/Swift config
+* Update nova\_client.py
+* objectstore: trivial cleanup in \_Base
+* Add support for CA authentication in Keystone
+* add unit attribute to statistics
+* Fix notify method signature on LogAlarmNotifier
+* Fix transformer's LOG TypeError
+* Update openstack.common
+* Fixes Hbase metadata query return wrong result
+* Fix Hacking 0.6 warnings
+* Make middleware.py Python 2.6 compatible
+* Call alembic migrations after sqlalchemy-migrate
+* Rename ceilometer.counter to ceilometer.sample
+* Added separate MongoDB database for each test
+* Relax OpenStack upper capping of client versions
+* Refactored MongoDB connection pool to use weakrefs
+* Centralized backends tests scenarios in one place
+* Added tests to verify that local time is correctly handled
+* Refactored impl\_mongodb to use full connection url
+* calling distinct on \_id field against a collection is slow
+* Use configured endpoint\_type everywhere
+* Allow use of local conductor
+* Update nova configuration doc to use notify\_on\_state\_change
+* doc: how to inject user-defined data
+* Add documentation on nova user defined metadata
+* Refactored API V2 tests to use testscenarios
+* Refactored API V1 tests to use testscenarios
+* alarm: Per user setting to disable ssl verify
+* alarm: Global setting to disable ssl verification
+* Imported Translations from Transifex
+* Implementation of the alarm RPCAlarmNotifier
+* Always init cfg.CONF before running a test
+* Sets storage\_conn in CollectorService
+* Remove replace/preserve logic from rate of change transformer
+* storage: remove per-driver options
+* hbase: do not register table\_prefix as a global option
+* mongodb: do not set replica\_set as a global option
+* Change nose to testr in the documentation
+* Fixed timestamp creation in MongoDB mapreduce
+* Ensure url is a string for requests.post
+* Implement a https:// in REST alarm notification
+* Implement dot in matching\_metadata key for mongodb
+* trailing slash in url causes 404 error
+* Fix missing foreign keys
+* Add cleanup migration for indexes
+* Sync models with migrations
+* Avoid dropping cpu\_util for multiple instances
+* doc: /statistics fields are not queryable (you cannot filter on them)
+* fix resource\_metadata failure missing image data
+* Standardize on X-Project-Id over X-Tenant-Id
+* Default to ctx user/project ID in sample POST API
+* Multiple dispatcher enablement
+* storage: fix clear/upgrade order
+* Lose weight for Ceilometer log in verbose mode
+* publisher.rpc: queing policies
+* Remove useless mongodb connection pool comment
+* Add index for db.meter by descending timestamp
+* doc: add a bunch of functional examples for the API
+* api: build the storage connection once and for all
+* Fix the argument of UnknownArgument exception
+* make publisher procedure call configurable
+* Disable mongod prealloc, wait for it to start
+* Added alembic migrations
+* Allow to enable time to live on metering sample
+* Implement a basic REST alarm notification
+* Imported Translations from Transifex
+* Ensure correct return code of run-tests.sh
+* File based publisher
+* Unset OS\_xx variable before generate configuration
+* Use run-tests.sh for tox coverage tests
+* Emit cpu\_util from transformer instead of pollster
+* Allow simpler scale exprs in transformer.conversions
+* Use a real MongoDB instance to run unit tests
+* Allow to specify the endpoint type to use
+* Rename README.md to README.rst
+* Use correct hostname to get instances
+* Provide CPU number as additional metadata
+* Remove get\_counter\_names from the pollster plugins
+* Sync SQLAlchemy models with migrations
+* Transformer to measure rate of change
+* Make sure plugins are named after their meters
+* Break up the swift pollsters
+* Split up the glance pollsters
+* Make visual coding style consistent
+* Separate power and energy pollsters
+* Break up compute pollsters
+* Implement a basic alarm notification service
+* Optionally store Events in Collector
+* Fix issue with pip installing oslo.config-1.2.0
+* Transformer to convert between units
+* publisher.rpc: make per counter topic optional
+* ceilometer tests need to be enabled/cleaned
+* Also accept timeout parameter in FakeMemCache
+* Fix MongoDB backward compat wrt units
+* Use oslo.sphinx and remove local copy of doc theme
+* Reference setuptools and not distribute
+* enable v2 api hbase tests
+* Register all interesting events
+* Unify Counter generation from notifications
+* doc: enhance v2 examples
+* Update glossary
+* Imported Translations from Transifex
+* Imported Translations from Transifex
+* Filter query op:gt does not work as expected
+* sqlalchemy: fix performance issue on get\_meters()
+* enable v2 api sqlalchemy tests
+* Update compute vnic pollster to use cache
+* Update compute CPU pollster to use cache
+* Update compute disk I/O pollster to use cache
+* update Quantum references to Neutron
+* Update swift pollster to use cache
+* Update kwapi pollster to use cache
+* Update floating-ip pollster to use cache
+* Update glance pollster to use cache
+* Add pollster data cache
+* Fix flake8 errors
+* Update Oslo
+* Enable Ceilometer to support mongodb replication set
+* Fix return error when resource can't be found
+* Simple service for singleton threshold eval
+* Basic alarm threshold evaluation logic
+* add metadata to nova\_client results
+* Bring in oslo-common rpc ack() changes
+* Pin the keystone client version
+* Fix auth logic for PUT /v2/alarms
+* Imported Translations from Transifex
+* Change period type in alarms API to int
+* mongodb: fix limit value not being an integer
+* Check that the config file sample is always up to date
+* api: enable v2 tests on SQLAlchemy & HBase
+* Remove useless periodic\_interval option
+* doc: be more explicit about network counters
+* Capture instance metadata in reserved namespace
+* Imported Translations from Transifex
+* pep8: enable E125 checks
+* pep8: enable F403 checks
+* pep8: enable H302 checks
+* pep8: enable H304 checks
+* pep8: enable H401
+* pep8: enable H402 checks
+* Rename the MeterPublisher to RPCPublisher
+* Replace publisher name by URL
+* Enable pep8 H403 checks
+* Activate H404 checks
+* Ceilometer may generate wrong format swift url in some situations
+* Code cleanup
+* Update Oslo
+* Use Flake8 gating for bin/ceilometer-\*
+* Update requirements to fix devstack installation
+* Update to the latest stevedore
+* Start gating on H703
+* Remove disabled\_notification\_listeners option
+* Remove disabled\_compute\_pollsters option
+* Remove disabled\_central\_pollsters option
+* Longer string columns for Trait and UniqueNames
+* Fix nova notifier tests
+* pipeline: switch publisher loading model to driver
+* Enforce reverse time-order for sample return
+* Remove explicit distribute depend
+* Use Python 3.x compatible octal literals
+* Improve Python 3.x compatibility
+* Fix requirements
+* Corrected path for test requirements in docs
+* Fix some typo in documentation
+* Add instance\_scheduled in entry points
+* fix session connection
+* Remove useless imports, reenable F401 checks
+* service: run common initialization stuff
+* Use console scripts for ceilometer-api
+* Use console scripts for ceilometer-dbsync
+* Use console scripts for ceilometer-agent-compute
+* Use console scripts for ceilometer-agent-central
+* agent-central: use CONF.import\_opt rather than import
+* Move os\_\* options into a group
+* Use console scripts for ceilometer-collector
+* sqlalchemy: migration error when running db-sync
+* session flushing error
+* api: add limit parameters to meters
+* python3: Introduce py33 to tox.ini
+* Start to use Hacking
+* Session does not use ceilometer.conf's database\_connection
+* Add support for limiting the number of samples returned
+* Imported Translations from Transifex
+* Add support policy to installation instructions
+* sql: fix 003 downgrade
+* service: remove useless PeriodicService class
+* Fix nova notifier tests
+* Explicitly set downloadcache in tox.ini
+* Imported Translations from Transifex
+
+2013.2.b1
+---------
+
+* Switch to sphinxcontrib-pecanwsme for API docs
+* Update oslo, use new configuration generator
+* doc: fix hyphens instead of underscores for 'os\*' conf options
+* Allow specifying a listen IP
+* Log configuration values on API startup
+* Don't use pecan to configure logging
+* Mark sensitive config options as secret
+* Imported Translations from Transifex
+* ImagePollster record duplicate counter during one poll
+* Rename requires files to standard names
+* Add an UDP publisher and receiver
+* hbase metaquery support
+* Imported Translations from Transifex
+* Fix and update extract\_opts group extraction
+* Fix the sample name of 'resource\_metadata'
+* Added missing source variable in storage drivers
+* Add Event methods to db api
+* vnics: don't presume existence of filterref/filter
+* force the test path to a str (sometimes is unicode)
+* Make sure that v2 api tests have the policy file configured
+* Imported Translations from Transifex
+* setup.cfg misses swift filter
+* Add a counter for instance scheduling
+* Move recursive\_keypairs into utils
+* Replace nose with testr
+* Use fixtures in the tests
+* fix compute units in measurement doc
+* Allow suppression of v1 API
+* Restore default interval
+* Change from unittest to testtools
+* remove unused tests/skip module
+* Imported Translations from Transifex
+* Get all tests to use tests.base.TestCase
+* Allow just a bit longer to wait for the server to startup
+* Document keystone\_authtoken section
+* Restore test dependency on Ming
+* Set the default pipline config file for tests
+* Imported Translations from Transifex
+* Fix cross-document references
+* Fix config setting references in API tests
+* Restrict pep8 & co to pep8 target
+* Fix meter\_publisher in setup.cfg
+* Use flake8 instead of pep8
+* Imported Translations from Transifex
+* Use sqlalchemy session code from oslo
+* Switch to pbr
+* fix the broken ceilometer.conf.sample link
+* Add a direct Ceilometer notifier
+* Do the same auth checks in the v2 API as in the v1 API
+* Add the sqlalchemy implementation of the alarms collection
+* Allow posting samples via the rest API (v2)
+* Updated the ceilometer.conf.sample
+* Don't use trivial alarm\_id's like "1" in the test cases
+* Fix the nova notifier tests after a nova rename
+* Document HBase configuration
+* alarm: fix MongoDB alarm id
+* Use jsonutils instead of json in test/api.py
+* Connect the Alarm API to the db
+* Add the mongo implementation of alarms collection
+* Move meter signature computing into meter\_publish
+* Update WSME dependency
+* Imported Translations from Transifex
+* Add Alarm DB API and models
+* Imported Translations from Transifex
+* Remove "extras" again
+* add links to return values from API methods
+* Modify limitation on request version
+* Doc improvements
+* Rename EventFilter to SampleFilter
+* Fixes AttributeError of FloatingIPPollster
+* Add just the most minimal alarm API
+* Update oslo before bringing in exceptions
+* Enumerate the meter type in the API Meter class
+* Remove "extras" as it is not used
+* Adds examples of CLI and API queries to the V2 documentation
+* Measurements documentation update
+* update the ceilometer.conf.sample
+* Set hbase table\_prefix default to None
+* glance/cinder/quantum counter units are not accurate/consistent
+* Add some recommendations about database
+* Pin SQLAlchemy to 0.7.x
+* Ceilometer configuration.rst file not using right param names for logging
+* Fix require\_map\_reduce mim import
+* Extend swift middleware to collect number of requests
+* instances: fix counter unit
+* Remove Folsom support
+* transformer, publisher: move down base plugin classes
+* pipeline, publisher, transformer: reorganize code
+* Fix tests after nova changes
+* Update to the lastest loopingcall from oslo
+* Imported Translations from Transifex
+* update devstack instructions for cinder
+* Update openstack.common
+* Reformat openstack-common.conf
+* storage: move nose out of global imports
+* storage: get rid of get\_event\_interval
+* Remove gettext.install from ceilometer/\_\_init\_\_.py
+* Prepare for future i18n use of \_() in nova notifier
+* Update part of openstack.common
+* Convert storage drivers to return models
+* Adpated to nova's gettext changes
+* add v2 query examples
+* storage: remove get\_volume\_sum and get\_volume\_max
+* api: run tests against HBase too
+* api: run sum unit tests against SQL backend too
+* Split and fix live db tests
+* Remove impl\_test
+* api: run max\_resource\_volume test on SQL backend
+* Refactor DB tests
+* fix volume tests to utilize VOLUME\_DELETE notification
+* Open havana development, bump to 2013.2
+
+2013.1
+------
+
+* Change the column counter\_volume to Float
+* tests: disable Ming test if Ming unavailable
+* Imported Translations from Transifex
+* enable arguments in tox
+* api: run max\_volume tests on SQL backend too
+* api: run list\_sources tests on SQL and Mongo backend
+* api: run list\_resources test against SQL
+* api: handle case where metadata is None
+* Fix statistics period computing with start/end time
+* Allow publishing arbitrary headers via the "storage.objects.\*.bytes" counter
+* Updated the description of get\_counters routine
+* enable xml error message response
+* Swift pollster silently return no counter if keystone endpoint is not present
+* Try to get rid of the "events" & "raw events" naming in the code
+* Switch to python-keystoneclient 0.2.3
+* include a copy of the ASL 2.0
+* add keystone configuration instructions to manual install docs
+* Update openstack.common
+* remove unused dependencies
+* Set the default\_log\_levels to include keystoneclient
+* Switch to final 1.1.0 oslo.config release
+* Add deprecation warnings for V1 API
+* Raise stevedore requirement to 0.7
+* Fixed the blocking unittest issues
+* Fix a pep/hacking error in a swift import
+* Add sample configuration files for mod\_wsgi
+* Add a tox target for building documentation
+* Use a non-standard port for the test server
+* Ensure the statistics are sorted
+* Start both v1 and v2 api from one daemon
+* Handle missing units values in mongodb data
+* Imported Translations from Transifex
+* Make HACKING compliant
+* Update manual installation instructions
+* Fix oslo.config and unittest
+* Return something sane from the log impl
+* Fix an invalid test in the storage test suite
+* Add the etc directory to the sdist manifest
+* api: run compute duration by resource on SQL backend
+* api: run list\_projects tests against SQL backend too
+* api: run list users test against SQL backend too
+* api: run list meters tests against SQL backend too
+* Kwapi pollster silently return no probre if keystone endpoint is not present
+* HBase storage driver, initial version
+* Exclude tests directory from installation
+* Ensure missing period is treated consistently
+* Exclude tests when installing ceilometer
+* Run some APIv1 tests on different backends
+* Remove old configuration metering\_storage\_engine
+* Set where=tests
+* Decouple the nova notifier from ceilometer code
+* send-counter: fix & test
+* Remove nose wrapper script
+* Fix count type in MongoDB
+* Make sure that the period is returned as an int as the api expects an int
+* Imported Translations from Transifex
+* Remove compat cfg wrapper
+* compute: fix unknown flavor handling
+* Allow empty dict as metaquery param for sqlalchemy
+* Add glossary definitions for additional terms
+* Support different publisher interval
+* Fix message envelope keys
+* Revert recent rpc wire format changes
+* Document the rules for units
+* Fix a bug in compute manager test case
+* plugin: don't use @staticmethod with abc
+* Support list/tuple as meter message value
+* Imported Translations from Transifex
+* Update common to get new kombu serialization code
+* Disable notifier tests
+* pipeline: manager publish multiple counters
+* Imported Translations from Transifex
+* Use oslo-config-2013.1b3
+* mongodb: make count an integer explicitely
+* tests: allow to run API tests on live db
+* Update to latest oslo-version
+* Imported Translations from Transifex
+* Add directive to MANIFEST.in to include all the html files
+* Use join\_consumer\_pool() for notifications
+* Update openstack.common
+* Add period support in storage drivers and API
+* Update openstack/common tree
+* storage: fix mongo live tests
+* swift: configure RPC service correctly
+* Fix tox python version for Folsom
+* api: use delta\_seconds()
+* transformer: add acculumator transformer
+* Import service when cfg.CONF.os\_\* is used
+* pipeline: flush after publishing call
+* plugin: format docstring as rst
+* Use Mongo finalize to compute avg and duration
+* Code cleanup, remove useless import
+* api: fix a test
+* compute: fix notifications test
+* Move counter\_source definition
+* Allow to publish several counters in a row
+* Fixed resource api in v2-api
+* Update meter publish with pipeline framework
+* Use the same Keystone client instance for pollster
+* pipeline: fix format error in logging
+* More robust mocking of nova conductor
+* Mock more conductor API methods to unblock tests
+* Update pollsters to return counter list
+* Update V2 API documentation
+* Added hacking.py support to pep8 portion of tox
+* setup: fix typo in package data
+* Fix formatting issue with v1 API parameters
+* Multiple publisher pipeline framework
+* Remove setuptools\_git from setup\_requires
+* Removed unused param for get\_counters()
+* Use WSME 0.5b1
+* Factorize agent code
+* Fixed the TemplateNotFound error in v1 api
+* Ceilometer-api is crashing due to pecan module missing
+* Clean class variable in compute manager test case
+* Update nova notifier test after nova change
+* Fix documentation formatting issues
+* Simplify ceilometer-api and checks Keystone middleware parsing
+* Fix nova conf compute\_manager unavailable
+* Rename run\_tests.sh to wrap\_nosetests.sh
+* Update openstack.common
+* Corrected get\_raw\_event() in sqlalchemy
+* Higher level test for db backends
+* Remove useless imports
+* Flatten the v2 API
+* Update v2 API for WSME code reorg
+* Update WebOb version specification
+* Remove the ImageSizePollster
+* Add Kwapi pollster (energy monitoring)
+* Fixes a minor documentation typo
+* Peg the version of Ming used in tests
+* Update pep8 to 1.3.3
+* Remove leftover useless import
+* Enhance policy test for init()
+* Provide the meters unit's in /meters
+* Fix keystoneclient auth\_token middleware changes
+* policy: fix policy\_file finding
+* Remove the \_initialize\_config\_options
+* Add pyflakes
+* Make the v2 API date query parameters consistent
+* Fix test blocking issue and pin docutils version
+* Apply the official OpenStack stylesheets and templates to the Doc build
+* Fixed erroneous source filter in SQLAlchemy
+* Fix warnings in the documentation build
+* Handle finish and revert resize notifications
+* Add support for Folsom version of Swift
+* Implement user-api
+* Add support for Swift incoming/outgoing trafic metering
+* Pass a dict configuration file to auth\_keystone
+* Import only once in nova\_notifier
+* Fix MySQL charset error
+* Use default configuration file to make test data
+* Fix Glance control exchange
+* Move back api-v1 to the main api
+* Fix WSME arguments handling change
+* Remove useless gettext call in sql engine
+* Ground work for transifex-ify ceilometer
+* Add instance\_type information to NetPollster
+* Fix dbsync API change
+* Fix image\_id in instance resource metadata
+* Instantiate inspector in compute manager
+* remove direct nova db access from ceilometer
+* Make debugging the wsme app a bit easier
+* Implements database upgrade as storage engine independent
+* Fix the v1 api importing of acl
+* Add the ability to filter on metadata
+* Virt inspector directly layered over hypervisor API
+* Move meter.py into collector directory
+* Change mysql schema from latin1 to utf8 
+* Change default os-username to 'ceilometer'
+* Restore some metadata to the events and resources
+* Update documentation URL
+* Add sql db option to devstack for ceilometer
+* Remove debug print in V2 API
+* Start updating documentation for V2 API
+* Implement V2 API with Pecan and WSME
+* Move v1 API files into a subdirectory
+* Add test storage driver
+* Implement /meters to make discovery "nicer" from the client
+* Fix sqlalchemy for show\_data and v1 web api
+* Implement object store metering
+* Make Impl of mongodb and sqlalchemy consistent
+* add migration migrate.cfg file to the python package
+* Fixes to enable the jenkins doc job to work
+* Lower the minimum required version of anyjson
+* Fix blocking test for nova notifier
+* network: remove left-over useless nova import
+* tools: set novaclient minimum version
+* libvirt: fix Folsom compatibility
+* Lower pymongo dependency
+* Remove rickshaw subproject
+* Remove unused rpc import
+* Adapted to nova's compute\_driver moving
+* doc: fix cpu counter unit
+* tools: use tarballs rather than git for Folsom tests
+* Used auth\_token middleware from keystoneclient
+* Remove cinderclient dependency
+* Fix latest nova changes
+* api: replace minified files by complete version
+* Add Folsom tests to tox
+* Handle nova.flags removal
+* Provide default configuration file
+* Fix mysql\_engine option type
+* Remove nova.flags usage
+* api: add support for timestamp in \_list\_resources()
+* api: add timestamp interval support in \_list\_events()
+* tests: simplify api list\_resources
+* Update openstack.common(except policy)
+* Adopted the oslo's rpc.Service change
+* Use libvirt num\_cpu for CPU utilization calculation
+* Remove obsolete reference to instance.vcpus
+* Change references of /etc/ceilometer-{agent,collector}.conf to /etc/ceilometer/ceilometer.conf
+* Determine instance cores from public flavors API
+* Determine flavor type from the public nova API
+* Add comment about folsom compatibility change
+* Add keystone requirement for doc build
+* Avoid TypeError when loading libvirt.LibvirtDriver
+* Don't re-import flags and do parse\_args instead of flags.FLAGS()
+* doc: rename stackforge to openstack
+* Fix pymongo requirements
+* Update .gitreview for openstack
+* Update use of nova config to work with folsom
+* compute: remove get\_disks work-around
+* Use openstack versioning
+* Fix documentation build
+* document utc naive timestamp
+* Remove database access from agent pollsters
+* Fix merge error in central/manager.py
+* Fix nova config parsing
+* pollster trap error due to zero floating ip
+* Use the service.py in openstack-common
+* Allow no configured sources, provide a default file
+* Add service.py from openstack-common
+* Update common (except policy)
+* nova fake libvirt library breaking tests
+* Move db access out into a seperate file
+* Remove invalid fixme comments
+* Add new cpu\_util meter recording CPU utilization %
+* Fix TypeError from old-style publish\_counter calls
+* Fix auth middleware configuration
+* pin sqlalchemy to 0.7.x but not specifically 0.7.8
+* add mongo index names
+* set tox to ignore global packages
+* Provide a way to disable some plugins
+* Use stevedore to load all plugins
+* implement get\_volume\_max for sqlalchemy
+* Add basic text/html renderer
+* network: floating IP account in Quantum
+* add unit test for CPUPollster
+* Clean up context usage
+* Add dependencies on clients used by pollsters
+* add ceilometer-send-counter
+* Update openstack.common.cfg
+* Fix tests broken by API change with Counter class
+* api: add source detail retrieval
+* Set source at publish time
+* Instance pollster emits instance.<type> meter
+* timestamp columns in sqlalchemy not timezone aware
+* Remove obsolete/incorrect install instructions
+* network: emit router meter
+* Fix sqlalchemy performance problem
+* Added a working release-bugs.py script to tools/
+* Change default API port
+* sqlalchemy record\_meter merge objs not string
+* Use glance public API as opposed to registry API
+* Add OpenStack trove classifier for PyPI
+* bump version number to 0.2
+
+0.1
+---
+
+* Nova libvirt release note
+* Update metadata for PyPI registration
+* tox: add missing venv
+* Fixes a couple typos
+* Counter renaming
+* Set correct timestamp on floatingip counter
+* Fix API change in make\_test\_data.py
+* Fix Nova URL in doc
+* Some more doc fixes
+* Ignore instances in the ERROR state
+* Use the right version number in documentation
+* doc: fix network.\*.\* resource id
+* image: handle glance delete notifications
+* image: handle glance upload notifications
+* image: add update event, fix ImageServe owner
+* network: fix create/update counter type & doc
+* Assorted doc fixes
+* add max/sum project volume and fix tests
+* Add general options
+* compute.libvirt: split read/write counters
+* API: add Keystone ACL and policy support
+* Add documentation for configuration options
+* network: do not emit counter on exists event, fix resource id
+* Move net function in class method and fix instance id
+* Prime counter table
+* Fix the configuration for the nova notifier
+* Initialize the control\_exchange setting
+* Set version 0.1
+* Make the instance counters use the same type
+* Restore manual install documentation
+* add quantum release note
+* Add release notes to docs
+* Update readme and create release notes
+* Remove duration field in Counter
+* Add counter for number of packets per vif
+* Move instance counter into its own pollster
+* Add a request counter for instance I/O
+* Rename instance disk I/O counter
+* Rename instances network counters
+* Use constant rather than string from counter type
+* Update the architecture diagram
+* Increase default polling interval
+* Fix compute agent publishing call
+* network: listen for Quantum exists event
+* Correct requirements filename
+* Fix notification subscription logic
+* Fix quantum notification subscriptions
+* Split meter publishing from the global config obj
+* network: add counter for actions
+* network: listen for Quantum notifications
+* Rename absolute to gauge
+* Fix typo in control exchanges help texts
+* Rework RPC notification mechanism
+* Update packaging files
+* Update URL list
+* Update openstack.common
+* Add volume/sum API endpoint for resource meters
+* Add resource volume/max api call
+* Fix dependency on anyjson
+* Listen for volume.delete.start instead of end
+* implement sqlalchemy dbengine backend
+* Add a notification handler for image downloads
+* Allow glance pollster tests to run
+* Create tox env definition for using a live db
+* Picking up dependencies from pip-requires file
+* Specify a new queue in manager
+* Rework RPC connection
+* Stop using nova's rpc module
+* Add configuration script to turn on notifications
+* Pep8 fixes, implement pep8 check on tests subdir
+* Use standard CLI options & env vars for creds
+* compute: remove get\_metadata\_from\_event()
+* Listen for volume notifications
+* Add pollster for Glance
+* Fix Nova notifier test case
+* Fix nova flag parsing
+* Add nova\_notifier notification driver for nova
+* Split instance polling code
+* Use stevedore to load storage engine drivers
+* Implement duration calculation API
+* Create tool for generating test meter data
+* Update openstack-common code to latest
+* Add bin/ceilometer-api for convenience
+* Add local copy of architecture diagram
+* Add timestamp parameters to the API docs
+* Check for doc build dependency before building
+* Pollster for network internal traffic (n1,n2)
+* Fix PEP8 issues 
+* Add archicture diagram to documentation
+* added mongodb auth
+* Change timestamp management for resources
+* Log the instance causing the error when a pollster fails
+* Document how to install with devstack
+* Remove test skipping logic
+* Remove dependency on nova test modules
+* Add date range parameters to resource API
+* Add setuptools-git support
+* Add separate notification handler for instance flavor
+* Change instance meter type
+* Split the existing notification handlers up
+* Remove redundancy in the API
+* Separate the tox coverage test setup from py27
+* Do not require user or project argument for event query
+* Add pymongo dependency for readthedocs.org build
+* Update openstack.common
+* Add API documentation
+* Be explicit about test dir
+* Add list projects API
+* Sort list of users and projects returned from queries
+* Add project arg to event and resource queries
+* Fix "meter" literal in event list API
+* collector exception on record\_metering\_data
+* Add API endpoint for listing raw event data
+* Change compute pollster API to work on one instance at a time
+* Create "central" agent
+* Skeleton for API server
+* fix use of source value in mongdb driver
+* Add {root,ephemeral}\_disk\_size counters
+* Implements vcpus counter
+* Fix nova configuration loading
+* Implements memory counter
+* Fix and document counter types
+* Check compute driver using new flag
+* Add openstack.common.{context,notifier,log} and update .rpc
+* Update review server link
+* Add link to roadmap
+* Add indexes to MongoDB driver
+* extend developer documentation
+* Reset the correct nova dependency URL
+* Switch .gitreview to use OpenStack gerrit
+* Add MongoDB engine
+* Convert timestamps to datetime objects before storing
+* Reduce complexity of storage engine API
+* Remove usage of nova.log
+* Documentation edits:
+* fix typo in instance properties list
+* Add Sphinx wrapper around existing docs
+* Configure nova.flags as well as openstack.common.cfg
+* First draft of plugin/agent documentation. Fixes bug 1018311
+* Essex: update Nova to 2012.1.1, add python-novaclient
+* Split service preparation, periodic interval configurable
+* Use the same instance metadata everywhere
+* Emit meter event for instance "exists"
+* Start defining DB engine API
+* Fallback on nova.rpc for Essex
+* Add instance metadata from notification events
+* Combined fix to get past broken state of repo
+* Add more metadata to instance counter
+* Register storage options on import
+* Add Essex tests
+* log more than ceilometer
+* Remove event\_type field from meter messages
+* fix message signatures for nested dicts
+* Remove nova.flags usage
+* Copy openstack.common.cfg
+* check message signatures in the collector
+* Sketch out a plugin system for saving metering data
+* refactor meter event publishing code
+* Add and use ceilometer own log module
+* add counter type field
+* Use timestamp instead of datetime when creating Counter
+* Use new flag API
+* Fix a PEP8 error
+* Make the stand-alone test script mimic tox
+* Remove unneeded eventlet test requirement
+* Add listeners for other instance-related events
+* Add tox configuration
+* Use openstack.common.cfg for ceilometer options
+* Publish and receive metering messages
+* Add floating IP pollster
+* Fix tests based on DB by importing nova.tests
+* make the pollsters in the agent plugins
+* Build ceilometer-agent and ceilometer-collector
+* Add plugin support to the notification portion of the collector daemon
+* Add CPU time fetching
+* Add an example function for converting a nova notification to a counter
+* add a tool for recording notifications and replaying them
+* Add an exception handler to deal with errors that occur when the info in nova is out of sync with reality (as on my currently broken system). Also adds a nova prefix to the logger for now so messages from this module make it into the log file
+* Periodically fetch for disk io stats
+* Use nova.service, add a manager class
+* Change license to Apache 2.0
+* Add setup.py
+* Import ceilometer-nova-compute
+* Ignore pyc files
+* Add link to blueprint
+* Add .gitreview file
+* initial commit
