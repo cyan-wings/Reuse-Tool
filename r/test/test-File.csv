@@ -1,4 +1,4 @@
 "ID","Name","LongName","Parent","McCC","CLOC","PDA","PUA","LLOC","LOC"
-"L117","package-info.java","/home/cyan-wings/Documents/streamlit-project/sample-java-project/src/sample/java/project/package-info.java","L116","1","0","0","0","1","5"
-"L118","SampleJavaProject.java","/home/cyan-wings/Documents/streamlit-project/sample-java-project/src/sample/java/project/SampleJavaProject.java","L116","5","0","3","1","51","78"
-"L123","SampleJavaProjectTest.java","/home/cyan-wings/Documents/streamlit-project/sample-java-project/test/sample/java/project/SampleJavaProjectTest.java","L122","1","0","4","0","21","43"
+"L117","package-info.java","/home/cyan-wings/Documents/streamlit-test/sample-java-project/src/sample/java/project/package-info.java","L116","1","0","0","0","1","5"
+"L118","SampleJavaProject.java","/home/cyan-wings/Documents/streamlit-test/sample-java-project/src/sample/java/project/SampleJavaProject.java","L116","5","0","3","1","51","78"
+"L123","SampleJavaProjectTest.java","/home/cyan-wings/Documents/streamlit-test/sample-java-project/test/sample/java/project/SampleJavaProjectTest.java","L122","1","0","4","0","21","43"
