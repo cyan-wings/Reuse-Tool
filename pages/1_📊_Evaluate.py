@@ -26,16 +26,32 @@ def classifier_long_names(key):
 st.markdown("# Reuse Assessment Tool")
 st.sidebar.header("Reuse Assessment Tool")
 st.write(
-    """This tool evaluates the reuse of a GitHub project given its handle."""
+    """This tool evaluates the reuse of a Java GitHub project given its handle."""
+)
+
+st.markdown(
+    """
+    ### **Usage example:** 
+    
+    A developer wants to assess a Java project.
+    
+    1. Create and upload the project onto GitHub.
+    2. Select the ML classifier to use to predict the reuse of the project.
+    3. Input the GitHub handle of the uploaded project onto GitHub.
+    (e.g., the handle of https://github.com/skeeto/sample-java-project is 
+    "skeeto/sample-java-project".)
+    4. Values of important metrics are displayed in the output providing value recommendations 
+    to potentially improve the reuse of the project.
+    """
 )
 
 classifier = st.selectbox(
-    'Classifier',
+    'Selected classifier: ',
     modelMap,
     format_func = classifier_long_names)
 #st.write('Classifier: ', classifier)
 
-gh_link = st.text_input('GitHub Handle', placeholder='mockito/mockito')
+gh_link = st.text_input('GitHub Handle: ', placeholder='example: mockito/mockito')
 
 def remove_columns(df):
     #Uses for loop to skip any error in dropping columns that don't exist (Some files may not have columns with a subset of these columns)

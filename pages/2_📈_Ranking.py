@@ -2,6 +2,27 @@ import streamlit as st
 import pandas as pd
 from collections import deque
 
+st.markdown("# Ranking")
+st.sidebar.header("Ranking")
+st.write(
+    """The listed table is ranked Maven repositories within the 
+    studied dataset grouped by selected tag ordered based on predicted 
+    regression on the reuse value. Tags represent the scope domain/purpose 
+    of a repository. By default, the table displays all the studied repositories."""
+)
+
+st.markdown(
+    """
+    ### **Example:** 
+    
+    A developer plans to identify the most reusable Java logging framework.
+    
+    - From the dropdown, search 'logging' and hit 'Enter'/click to select 'logging' to rank the list of 'logging' 
+    related repositories studied.
+    """
+)
+
+
 @st.cache_data
 def load_data():
     data = pd.read_csv("Data/forWebsite.csv", sep=",", encoding='utf-8')
@@ -15,7 +36,7 @@ tagsForSelection = deque(tagsForSelection)
 tagsForSelection.appendleft('All')
 tagsForSelection = list(tagsForSelection)
 select = st.selectbox(
-    'Tag',
+    'Selected tag: ',
     tagsForSelection)
 
 if select != 'All':
