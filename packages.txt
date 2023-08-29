@@ -1,1 +1,1 @@
-oracle-java11-set-default
+openjdk-11-jdk
