@@ -1,1 +1,1 @@
-openjdk-11-jdk:amd64
+openjdk-11-jdk
