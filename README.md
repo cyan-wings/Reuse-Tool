@@ -1,4 +1,4 @@
-# Reuse Assessmeent Tool
+# Reuse Assessment Tool
 
 Author:       Matthew Yeow
 
