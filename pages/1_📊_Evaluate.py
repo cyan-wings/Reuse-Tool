@@ -127,7 +127,7 @@ def get_evaluation_data(github_link):
 
 def generateTable(sample_array):
     status_array = []  # 1 = check, 2 = up, 3 = down
-    importance_features = [('Fsum_PUA', 40, 'H'), ('No_F', 250, 'L'), ('Cmax_NII', 80, 'L'), ('Csum_NL', 450, 'L'), ('Cstd_CBO', 2, 7),  ('Cmax_LCOM5', 10, 'H'), ('Cmax_CBO', 20, 80)]
+    importance_features = [('Fsum_PUA', 450, 'L'), ('No_F', 250, 'L'), ('Cmax_NII', 80, 'L'), ('Csum_NL', 450, 'L'), ('Cstd_CBO', 2, 7),  ('Cmax_LCOM5', 10, 'H'), ('Cmax_CBO', 20, 80)]
     actual_values = []
     for f in importance_features:
         actual_values.append(sample_array[f[0]])
