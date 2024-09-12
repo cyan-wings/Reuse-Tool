@@ -176,11 +176,14 @@ def generateTable(sample_array):
 
 
 if st.button('Evaluate'):
-    sample_array = get_evaluation_data(gh_link)
-    model = dill.load(open("Saved_Models/{}.pkl".format(classifier),"rb"))
-    if model.predict([sample_array])[0] == 1:
-        st.write('HIGH REUSE')
+    if gh_link == '':
+        st.write('NO INPUT')
     else:
-        st.write('LOW REUSE')
-    generateTable(sample_array)
+        sample_array = get_evaluation_data(gh_link)
+        model = dill.load(open("Saved_Models/{}.pkl".format(classifier),"rb"))
+        if model.predict([sample_array])[0] == 1:
+            st.write('HIGH REUSE')
+        else:
+            st.write('LOW REUSE')
+        generateTable(sample_array)
 
